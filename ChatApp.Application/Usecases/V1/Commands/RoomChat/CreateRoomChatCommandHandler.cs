@@ -7,23 +7,20 @@ using ChatApp.Contract.Abstractions.Shared;
 using ChatApp.Contract.Services.V1.RoomChat;
 using ChatApp.Domain.Abstractions;
 using ChatApp.Domain.Abstractions.Repositories;
-using ChatApp.Domain.Entities;
-using ChatApp.Domain.Entities.Identity;
 using ChatApp.Domain.Exceptions;
-using Microsoft.AspNetCore.Identity;
+using MediatR;
+using static ChatApp.Contract.Services.V1.RoomChat.DomainEvent;
 
 namespace ChatApp.Application.Usecases.V1.Commands.RoomChat
 {
     public sealed class CreateRoomChatCommandHandler : CommandHandlerBase<Domain.Entities.RoomChat, Guid>, ICommandHandler<Command.CreateRoomChatCommand>
     {
-        private readonly IRepositoryBase<ConversationParticipant, Guid> _conversationParticipantRepository;
-        private readonly UserManager<AppUser> _userManager;
-        public CreateRoomChatCommandHandler(IRepositoryBase<Domain.Entities.RoomChat, Guid> repositoryBase, IUnitOfWork unitOfWork,
-            IRepositoryBase<ConversationParticipant, Guid> conversationParticipantRepository, UserManager<AppUser> userManager)
-                : base(repositoryBase, unitOfWork)
+
+        private readonly IPublisher _publisher;
+        public CreateRoomChatCommandHandler(IRepositoryBase<Domain.Entities.RoomChat, Guid> repositoryBase, IPublisher publisher)
+            : base(repositoryBase)
         {
-            _conversationParticipantRepository = conversationParticipantRepository;
-            _userManager = userManager;
+            _publisher = publisher;
         }
         public async Task<Result> Handle(Command.CreateRoomChatCommand request, CancellationToken cancellationToken)
         {
@@ -50,25 +47,8 @@ namespace ChatApp.Application.Usecases.V1.Commands.RoomChat
                 room.Name = request.Name ?? $"Group chat by {uniqueMembers.First().Name} host";
             }
             _repository.Add(room);
-
             // add members into conversation
-            foreach (var member in uniqueMembers)
-            {
-                var isUserExists = await _userManager.FindByIdAsync(member.Id.ToString());
-                if (isUserExists == null)
-                {
-                    // throw Error User ID invalid
-                    throw new RoomChatException.MemberIdIsInvalid(member.Id);
-                }
-                _conversationParticipantRepository.Add(new ConversationParticipant
-                {
-                    UserId = member.Id,
-                    RoomChatId = room.Id,
-                    NickName = member.NickName ?? member.Name,
-                    CreatedDate = DateTime.UtcNow
-                });
-            }
-            await _unitOfWork.SaveChangesAsync(cancellationToken);
+            await _publisher.Publish(new RoomChatCreatedEvent(Guid.NewGuid(), room.Id, uniqueMembers), cancellationToken);
             return Result.Success();
         }
     }

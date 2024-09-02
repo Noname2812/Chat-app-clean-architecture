@@ -8,7 +8,6 @@ namespace ChatApp.Contract.Services.V1.RoomChat
     {
         public record CreateRoomChatCommand(bool? IsGroup = false, string? Avatar = null,int? TopicBackgroundId = null, 
             string? Name = null,List<Member>? Members = null) : ICommand;
-        public record Member(Guid Id, string Name, string? NickName);
     }
-
+    public record Member(Guid Id, string Name, string? NickName);
 }

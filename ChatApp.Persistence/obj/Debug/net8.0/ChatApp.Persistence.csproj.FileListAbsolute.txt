@@ -26,10 +26,10 @@ D:\CleanArchitecture\ChatApp\ChatApp.Persistence\obj\Debug\net8.0\ChatApp.Persis
 D:\CleanArchitecture\ChatApp\ChatApp.Persistence\obj\Debug\net8.0\ChatApp.Persistence.AssemblyInfoInputs.cache
 D:\CleanArchitecture\ChatApp\ChatApp.Persistence\obj\Debug\net8.0\ChatApp.Persistence.AssemblyInfo.cs
 D:\CleanArchitecture\ChatApp\ChatApp.Persistence\obj\Debug\net8.0\ChatApp.Persistence.csproj.CoreCompileInputs.cache
+D:\CleanArchitecture\ChatApp\ChatApp.Persistence\obj\Debug\net8.0\ChatApp.Persistence.sourcelink.json
 D:\CleanArchitecture\ChatApp\ChatApp.Persistence\obj\Debug\net8.0\ChatApp..2BEF35BD.Up2Date
 D:\CleanArchitecture\ChatApp\ChatApp.Persistence\obj\Debug\net8.0\ChatApp.Persistence.dll
 D:\CleanArchitecture\ChatApp\ChatApp.Persistence\obj\Debug\net8.0\refint\ChatApp.Persistence.dll
 D:\CleanArchitecture\ChatApp\ChatApp.Persistence\obj\Debug\net8.0\ChatApp.Persistence.pdb
 D:\CleanArchitecture\ChatApp\ChatApp.Persistence\obj\Debug\net8.0\ChatApp.Persistence.genruntimeconfig.cache
 D:\CleanArchitecture\ChatApp\ChatApp.Persistence\obj\Debug\net8.0\ref\ChatApp.Persistence.dll
-D:\CleanArchitecture\ChatApp\ChatApp.Persistence\obj\Debug\net8.0\ChatApp.Persistence.sourcelink.json

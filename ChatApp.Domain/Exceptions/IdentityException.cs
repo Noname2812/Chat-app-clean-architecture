@@ -17,5 +17,11 @@ namespace ChatApp.Domain.Exceptions
 
             }
         }
+        public class UserNotFound : BadRequestException
+        {
+            public UserNotFound(Guid? userId) : base($"The user whose id is {userId} does not exist")
+            {
+            }
+        }
     }
 }

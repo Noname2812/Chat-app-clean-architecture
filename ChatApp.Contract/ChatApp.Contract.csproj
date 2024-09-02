@@ -12,6 +12,7 @@
     <Folder Include="Services\V1\Friend\Validators\" />
     <Folder Include="Services\V1\Message\" />
     <Folder Include="Services\V1\RoomChat\Validators\" />
+    <Folder Include="Services\V1\User\Validators\" />
     <Folder Include="Services\V2\" />
   </ItemGroup>
 

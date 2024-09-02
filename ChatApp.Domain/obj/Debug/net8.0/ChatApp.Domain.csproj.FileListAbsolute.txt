@@ -18,8 +18,8 @@ D:\CleanArchitecture\ChatApp\ChatApp.Domain\obj\Debug\net8.0\ChatApp.Domain.Gene
 D:\CleanArchitecture\ChatApp\ChatApp.Domain\obj\Debug\net8.0\ChatApp.Domain.AssemblyInfoInputs.cache
 D:\CleanArchitecture\ChatApp\ChatApp.Domain\obj\Debug\net8.0\ChatApp.Domain.AssemblyInfo.cs
 D:\CleanArchitecture\ChatApp\ChatApp.Domain\obj\Debug\net8.0\ChatApp.Domain.csproj.CoreCompileInputs.cache
+D:\CleanArchitecture\ChatApp\ChatApp.Domain\obj\Debug\net8.0\ChatApp.Domain.sourcelink.json
 D:\CleanArchitecture\ChatApp\ChatApp.Domain\obj\Debug\net8.0\ChatApp.Domain.dll
 D:\CleanArchitecture\ChatApp\ChatApp.Domain\obj\Debug\net8.0\refint\ChatApp.Domain.dll
 D:\CleanArchitecture\ChatApp\ChatApp.Domain\obj\Debug\net8.0\ChatApp.Domain.pdb
 D:\CleanArchitecture\ChatApp\ChatApp.Domain\obj\Debug\net8.0\ref\ChatApp.Domain.dll
-D:\CleanArchitecture\ChatApp\ChatApp.Domain\obj\Debug\net8.0\ChatApp.Domain.sourcelink.json

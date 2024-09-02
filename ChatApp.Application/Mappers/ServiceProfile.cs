@@ -1,9 +1,9 @@
 ﻿
 
 using AutoMapper;
+using ChatApp.Contract.DTOs;
 using ChatApp.Domain.Entities;
 using ChatApp.Domain.Entities.Identity;
-using static ChatApp.Contract.Services.V1.Identty.Respone;
 using static ChatApp.Contract.Services.V1.RoomChat.Respone;
 
 namespace ChatApp.Application.Mappers

@@ -1,6 +1,4 @@
-﻿
-
-using static ChatApp.Contract.Services.V1.Identty.Respone;
+﻿using ChatApp.Contract.DTOs;
 
 namespace ChatApp.Contract.Services.V1.RoomChat
 {

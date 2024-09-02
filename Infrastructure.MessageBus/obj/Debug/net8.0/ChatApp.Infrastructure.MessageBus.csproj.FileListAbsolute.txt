@@ -16,8 +16,8 @@ D:\CleanArchitecture\ChatApp\Infrastructure.MessageBus\obj\Debug\net8.0\ChatApp.
 D:\CleanArchitecture\ChatApp\Infrastructure.MessageBus\obj\Debug\net8.0\ChatApp.Infrastructure.MessageBus.AssemblyInfoInputs.cache
 D:\CleanArchitecture\ChatApp\Infrastructure.MessageBus\obj\Debug\net8.0\ChatApp.Infrastructure.MessageBus.AssemblyInfo.cs
 D:\CleanArchitecture\ChatApp\Infrastructure.MessageBus\obj\Debug\net8.0\ChatApp.Infrastructure.MessageBus.csproj.CoreCompileInputs.cache
+D:\CleanArchitecture\ChatApp\Infrastructure.MessageBus\obj\Debug\net8.0\ChatApp.Infrastructure.MessageBus.sourcelink.json
 D:\CleanArchitecture\ChatApp\Infrastructure.MessageBus\obj\Debug\net8.0\ChatApp.Infrastructure.MessageBus.dll
 D:\CleanArchitecture\ChatApp\Infrastructure.MessageBus\obj\Debug\net8.0\refint\ChatApp.Infrastructure.MessageBus.dll
 D:\CleanArchitecture\ChatApp\Infrastructure.MessageBus\obj\Debug\net8.0\ChatApp.Infrastructure.MessageBus.pdb
 D:\CleanArchitecture\ChatApp\Infrastructure.MessageBus\obj\Debug\net8.0\ref\ChatApp.Infrastructure.MessageBus.dll
-D:\CleanArchitecture\ChatApp\Infrastructure.MessageBus\obj\Debug\net8.0\ChatApp.Infrastructure.MessageBus.sourcelink.json
