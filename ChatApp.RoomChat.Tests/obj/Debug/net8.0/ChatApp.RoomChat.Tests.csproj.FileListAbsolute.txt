@@ -156,3 +156,4 @@ D:\CleanArchitecture\ChatApp\ChatApp.RoomChat.Tests\bin\Debug\net8.0\ChatApp.Dom
 D:\CleanArchitecture\ChatApp\ChatApp.RoomChat.Tests\bin\Debug\net8.0\ChatApp.Application.pdb
 D:\CleanArchitecture\ChatApp\ChatApp.RoomChat.Tests\bin\Debug\net8.0\ChatApp.Domain.pdb
 D:\CleanArchitecture\ChatApp\ChatApp.RoomChat.Tests\bin\Debug\net8.0\ChatApp.Contract.pdb
+D:\CleanArchitecture\ChatApp\ChatApp.RoomChat.Tests\obj\Debug\net8.0\ChatApp.RoomChat.Tests.sourcelink.json

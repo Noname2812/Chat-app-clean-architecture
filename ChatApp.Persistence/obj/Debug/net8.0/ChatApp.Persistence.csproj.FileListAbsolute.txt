@@ -32,3 +32,4 @@ D:\CleanArchitecture\ChatApp\ChatApp.Persistence\obj\Debug\net8.0\refint\ChatApp
 D:\CleanArchitecture\ChatApp\ChatApp.Persistence\obj\Debug\net8.0\ChatApp.Persistence.pdb
 D:\CleanArchitecture\ChatApp\ChatApp.Persistence\obj\Debug\net8.0\ChatApp.Persistence.genruntimeconfig.cache
 D:\CleanArchitecture\ChatApp\ChatApp.Persistence\obj\Debug\net8.0\ref\ChatApp.Persistence.dll
+D:\CleanArchitecture\ChatApp\ChatApp.Persistence\obj\Debug\net8.0\ChatApp.Persistence.sourcelink.json
