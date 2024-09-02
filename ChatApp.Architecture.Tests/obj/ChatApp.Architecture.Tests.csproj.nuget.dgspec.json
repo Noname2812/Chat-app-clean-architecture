@@ -159,6 +159,9 @@
               },
               "D:\\CleanArchitecture\\ChatApp\\ChatApp.Domain\\ChatApp.Domain.csproj": {
                 "projectPath": "D:\\CleanArchitecture\\ChatApp\\ChatApp.Domain\\ChatApp.Domain.csproj"
+              },
+              "D:\\CleanArchitecture\\ChatApp\\ChatApp.Persistence\\ChatApp.Persistence.csproj": {
+                "projectPath": "D:\\CleanArchitecture\\ChatApp\\ChatApp.Persistence\\ChatApp.Persistence.csproj"
               }
             }
           }

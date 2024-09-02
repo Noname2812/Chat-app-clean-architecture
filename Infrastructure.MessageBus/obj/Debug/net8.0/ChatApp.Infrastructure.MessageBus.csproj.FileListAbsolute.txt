@@ -20,3 +20,4 @@ D:\CleanArchitecture\ChatApp\Infrastructure.MessageBus\obj\Debug\net8.0\ChatApp.
 D:\CleanArchitecture\ChatApp\Infrastructure.MessageBus\obj\Debug\net8.0\refint\ChatApp.Infrastructure.MessageBus.dll
 D:\CleanArchitecture\ChatApp\Infrastructure.MessageBus\obj\Debug\net8.0\ChatApp.Infrastructure.MessageBus.pdb
 D:\CleanArchitecture\ChatApp\Infrastructure.MessageBus\obj\Debug\net8.0\ref\ChatApp.Infrastructure.MessageBus.dll
+D:\CleanArchitecture\ChatApp\Infrastructure.MessageBus\obj\Debug\net8.0\ChatApp.Infrastructure.MessageBus.sourcelink.json

@@ -16,7 +16,7 @@ namespace ChatApp.Application.DependencyInjections.Extensions
             //.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationDefaultBehavior<,>))
             .AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationPielineBehavior<,>))
             .AddTransient(typeof(IPipelineBehavior<,>), typeof(PerformancePielineBehavior<,>))
-            //.AddTransient(typeof(IPipelineBehavior<,>), typeof(TransactionPielineBehavior<,>))
+            .AddTransient(typeof(IPipelineBehavior<,>), typeof(TransactionPipelineBehavior<,>))
             //.AddTransient(typeof(IPipelineBehavior<,>), typeof(TracingPielineBehavior<,>))
             .AddValidatorsFromAssembly(Contract.AssemblyReference.Assembly, includeInternalTypes: true);
         public static IServiceCollection AddConfigureAutoMapper(this IServiceCollection services)

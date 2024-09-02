@@ -1,7 +1,6 @@
 ﻿
 
 using Carter;
-using ChatApp.Application.Abstractions.Services;
 using ChatApp.Contract.Enumerations;
 using ChatApp.Presentation.Abstractions;
 using MediatR;

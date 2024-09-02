@@ -22,3 +22,4 @@ D:\CleanArchitecture\ChatApp\ChatApp.Domain\obj\Debug\net8.0\ChatApp.Domain.dll
 D:\CleanArchitecture\ChatApp\ChatApp.Domain\obj\Debug\net8.0\refint\ChatApp.Domain.dll
 D:\CleanArchitecture\ChatApp\ChatApp.Domain\obj\Debug\net8.0\ChatApp.Domain.pdb
 D:\CleanArchitecture\ChatApp\ChatApp.Domain\obj\Debug\net8.0\ref\ChatApp.Domain.dll
+D:\CleanArchitecture\ChatApp\ChatApp.Domain\obj\Debug\net8.0\ChatApp.Domain.sourcelink.json

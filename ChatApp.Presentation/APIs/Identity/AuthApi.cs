@@ -18,13 +18,13 @@ public class AuthApi : ApiEndpoint, ICarterModule
     {
         var group1 = app.NewVersionedApi("Authentication")
                 .MapGroup(BaseURL).HasApiVersion(1).RequireAuthorization();
-        group1.MapPost("login", AuthenticationV1).AllowAnonymous();
+        group1.MapPost("login", LoginV1).AllowAnonymous();
         group1.MapPost("refresh-token", RefreshTokenV1);
         group1.MapPost("register", RegisterAccountV1).AllowAnonymous();
         group1.MapPost("logout", LogoutV1);
 
     }
-    public static async Task<IResult> AuthenticationV1(ISender sender, [FromBody] Contract.Services.V1.Identty.Query.LoginQuery login)
+    public static async Task<IResult> LoginV1(ISender sender, [FromBody] Contract.Services.V1.Identty.Query.LoginQuery login)
     {
         var result = await sender.Send(login);
         if (result.IsFailure)
@@ -61,5 +61,4 @@ public class AuthApi : ApiEndpoint, ICarterModule
         }
         return Results.Ok(result);
     }
-
 }
