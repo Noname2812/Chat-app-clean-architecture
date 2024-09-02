@@ -38,3 +38,4 @@ D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure\bin\Debug\net8.0\ChatApp.Per
 D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure\bin\Debug\net8.0\ChatApp.Application.pdb
 D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure\bin\Debug\net8.0\ChatApp.Persistence.pdb
 D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure\bin\Debug\net8.0\ChatApp.Contract.pdb
+D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure\obj\Debug\net8.0\ChatApp.Infrastructure.sourcelink.json

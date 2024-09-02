@@ -24,11 +24,5 @@ namespace ChatApp.Domain.Exceptions
                  
             }
         }
-        public class MemberIdIsInvalid : BadRequestException
-        {
-            public MemberIdIsInvalid(Guid memberId) : base($"The user whose id is {memberId} does not exist")
-            {
-            }
-        }
     }
 }

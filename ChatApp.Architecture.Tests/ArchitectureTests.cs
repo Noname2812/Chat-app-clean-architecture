@@ -307,5 +307,62 @@ namespace ChatApp.Architecture.Tests
 
         #endregion End Query
 
+        #region =============== Event ===============
+
+        [Fact]
+        public void Event_Should_Have_NamingConventionEndingEvent()
+        {
+            // Arrage
+            var assembly = Application.AssemblyReference.Assembly;
+
+            // Act
+            var testResult = Types
+                .InAssembly(assembly)
+                .That()
+                .ImplementInterface(typeof(IDomainEvent))
+                .Should().HaveNameEndingWith("Event")
+                .GetResult();
+
+            // Assert
+            testResult.IsSuccessful.Should().BeTrue();
+        }
+
+        [Fact]
+        public void EventHandlers_Should_Have_NamingConventionEndingEventHandler()
+        {
+            // Arrange
+            var assembly = Application.AssemblyReference.Assembly;
+
+            // Act
+            var testResult = Types.InAssembly(assembly)
+                .That()
+                .ImplementInterface(typeof(IDomainEventHandler<>))
+                .Should()
+                .HaveNameEndingWith("EventHandler")
+                .GetResult();
+
+            // Assert
+            testResult.IsSuccessful.Should().BeTrue();
+        }
+
+        [Fact]
+        public void EventHandlers_Should_Have_BeSealed()
+        {
+            // Arrange
+            var assembly = Application.AssemblyReference.Assembly;
+
+            // Act
+            var testResult = Types.InAssembly(assembly)
+                .That()
+                .ImplementInterface(typeof(IDomainEventHandler<>))
+                .Should()
+                .BeSealed()
+                .GetResult();
+
+            // Assert
+            testResult.IsSuccessful.Should().BeTrue();
+        }
+
+        #endregion End Query
     }
 }

@@ -6,6 +6,6 @@ namespace ChatApp.Contract.Abstractions.Message
 {
     public interface IDomainEvent : INotification
     {
-        public Guid IdEvent { get; init; }
+        public Guid Id { get; init; }
     }
 }

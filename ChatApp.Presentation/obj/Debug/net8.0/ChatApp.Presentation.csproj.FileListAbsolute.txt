@@ -40,3 +40,4 @@ D:\CleanArchitecture\ChatApp\ChatApp.Presentation\bin\Debug\net8.0\ChatApp.Infra
 D:\CleanArchitecture\ChatApp\ChatApp.Presentation\bin\Debug\net8.0\ChatApp.Persistence.dll
 D:\CleanArchitecture\ChatApp\ChatApp.Presentation\bin\Debug\net8.0\ChatApp.Infrastructure.pdb
 D:\CleanArchitecture\ChatApp\ChatApp.Presentation\bin\Debug\net8.0\ChatApp.Persistence.pdb
+D:\CleanArchitecture\ChatApp\ChatApp.Presentation\obj\Debug\net8.0\ChatApp.Presentation.sourcelink.json

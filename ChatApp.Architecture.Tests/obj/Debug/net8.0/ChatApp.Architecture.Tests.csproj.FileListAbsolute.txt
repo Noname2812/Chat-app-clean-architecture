@@ -311,3 +311,4 @@ D:\CleanArchitecture\ChatApp\ChatApp.Architecture.Tests\bin\Debug\net8.0\Cloudin
 D:\CleanArchitecture\ChatApp\ChatApp.Architecture.Tests\bin\Debug\net8.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
 D:\CleanArchitecture\ChatApp\ChatApp.Architecture.Tests\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 D:\CleanArchitecture\ChatApp\ChatApp.Architecture.Tests\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\CleanArchitecture\ChatApp\ChatApp.Architecture.Tests\obj\Debug\net8.0\ChatApp.Architecture.Tests.sourcelink.json
