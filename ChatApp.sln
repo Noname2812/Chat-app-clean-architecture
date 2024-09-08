@@ -30,7 +30,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatApp.RoomChat.Tests", "ChatApp.RoomChat.Tests\ChatApp.RoomChat.Tests.csproj", "{FE193387-DCA1-449E-AD59-93DF2C95AC23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatApp.RoomChat.Tests", "ChatApp.RoomChat.Tests\ChatApp.RoomChat.Tests.csproj", "{FE193387-DCA1-449E-AD59-93DF2C95AC23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatApp.Infrastructure.Dapper", "ChatApp.Infrastructure.Dapper\ChatApp.Infrastructure.Dapper.csproj", "{3B7DA8E4-C92F-4278-BEE1-CD92BBB08934}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -78,6 +80,10 @@ Global
 		{FE193387-DCA1-449E-AD59-93DF2C95AC23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE193387-DCA1-449E-AD59-93DF2C95AC23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE193387-DCA1-449E-AD59-93DF2C95AC23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B7DA8E4-C92F-4278-BEE1-CD92BBB08934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B7DA8E4-C92F-4278-BEE1-CD92BBB08934}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B7DA8E4-C92F-4278-BEE1-CD92BBB08934}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B7DA8E4-C92F-4278-BEE1-CD92BBB08934}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,6 +99,7 @@ Global
 		{4B227276-3488-4F7B-ADF7-774AFAA6409E} = {9D5741EB-688B-4A4A-9D78-6436FE2DDB4F}
 		{51FE3433-FB06-40D7-8E67-C074448BE303} = {40F88060-456B-46FA-8A9C-568526CA982E}
 		{FE193387-DCA1-449E-AD59-93DF2C95AC23} = {40F88060-456B-46FA-8A9C-568526CA982E}
+		{3B7DA8E4-C92F-4278-BEE1-CD92BBB08934} = {9D5741EB-688B-4A4A-9D78-6436FE2DDB4F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A54D5E37-9B5B-45AF-BAB8-6BDCBE5A9E92}

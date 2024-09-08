@@ -36,7 +36,7 @@ namespace ChatApp.Persistence.Migrations
                     b.Property<DateTimeOffset>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetimeoffset")
-                        .HasDefaultValue(new DateTimeOffset(new DateTime(2024, 9, 1, 17, 8, 19, 359, DateTimeKind.Unspecified).AddTicks(507), new TimeSpan(0, 7, 0, 0, 0)));
+                        .HasDefaultValue(new DateTimeOffset(new DateTime(2024, 9, 8, 0, 28, 13, 155, DateTimeKind.Unspecified).AddTicks(402), new TimeSpan(0, 7, 0, 0, 0)));
 
                     b.Property<DateTimeOffset>("ModifiedDate")
                         .HasColumnType("datetimeoffset");
@@ -73,7 +73,7 @@ namespace ChatApp.Persistence.Migrations
                     b.Property<int>("Status")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasDefaultValue(1);
+                        .HasDefaultValue(0);
 
                     b.HasKey("UserId", "FriendId");
 
@@ -212,7 +212,7 @@ namespace ChatApp.Persistence.Migrations
                     b.Property<DateTimeOffset>("LastOnline")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetimeoffset")
-                        .HasDefaultValue(new DateTimeOffset(new DateTime(2024, 9, 1, 17, 8, 19, 355, DateTimeKind.Unspecified).AddTicks(557), new TimeSpan(0, 7, 0, 0, 0)));
+                        .HasDefaultValue(new DateTimeOffset(new DateTime(2024, 9, 8, 0, 28, 13, 151, DateTimeKind.Unspecified).AddTicks(2304), new TimeSpan(0, 7, 0, 0, 0)));
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -344,6 +344,15 @@ namespace ChatApp.Persistence.Migrations
 
                     b.Property<Guid>("RoomChatId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("SeenByJson")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(0);
 
                     b.Property<int>("Type")
                         .ValueGeneratedOnAdd()

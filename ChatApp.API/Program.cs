@@ -2,7 +2,9 @@ using Carter;
 using ChatApp.API.DependencyInjection.Extensions;
 using ChatApp.API.Middleware;
 using ChatApp.Application.DependencyInjections.Extensions;
+using ChatApp.Infrastructure.Dapper.DependencyInjection.Extensions;
 using ChatApp.Infrastructure.DependencyInjection.Extensions;
+using ChatApp.Infrastructure.Hubs;
 using ChatApp.Persistence.DependencyInjection.Extensions;
 using ChatApp.Persistence.DependencyInjection.Options;
 using MicroElements.Swashbuckle.FluentValidation.AspNetCore;
@@ -37,6 +39,8 @@ builder.Services.ConfigureSqlServerRetryOptions(builder.Configuration.GetSection
 builder.Services.AddSqlConfiguration();
 builder.Services.AddRepositoryBaseConfiguration();
 builder.Services.AddConfigurationRedis(builder.Configuration);
+builder.Services.AddInfrastructureDapper();
+builder.Services.AddConfigurationSignalR();
 
 // Add Cater module
 builder.Services.AddCarter();
@@ -59,7 +63,6 @@ builder.Services
 // Add middleware
 builder.Services.AddTransient<ExceptionHandlingMiddleware>();
 builder.Services.AddTransient<BlackListTokenMiddleware>();
-
 var app = builder.Build();
 
 // Using middleware
@@ -78,7 +81,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 app.UseMiddleware<BlackListTokenMiddleware>();
 app.MapCarter();
-
+app.MapHub<ChatHub>("/chat");
 //app.MapControllers();
 try
 {

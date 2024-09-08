@@ -9,14 +9,17 @@ namespace ChatApp.API.Middleware
         public async Task InvokeAsync(HttpContext context, RequestDelegate next)
         {
             var token = context.Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
-            var cacheService = context.RequestServices.GetRequiredService<IRedisService>();
-            var cacheRespone = await cacheService.GetDataByKey($"black-list-token:{token}");
-            if (!string.IsNullOrWhiteSpace(token) && !string.IsNullOrEmpty(cacheRespone))
+            if (token != null)
             {
-                context.Response.ContentType = "application/json";
-                context.Response.StatusCode = StatusCodes.Status401Unauthorized;
-                await context.Response.WriteAsync(JsonSerializer.Serialize(new { Message = "Token has been blacklisted" }));
-                return;
+                var cacheService = context.RequestServices.GetRequiredService<IRedisService>();
+                var cacheRespone = await cacheService.GetDataByKey($"black-list-token:{token}");
+                if (!string.IsNullOrWhiteSpace(token) && !string.IsNullOrEmpty(cacheRespone))
+                {
+                    context.Response.ContentType = "application/json";
+                    context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+                    await context.Response.WriteAsync(JsonSerializer.Serialize(new { Message = "Token has been blacklisted" }));
+                    return;
+                }
             }
             await next(context);
         }

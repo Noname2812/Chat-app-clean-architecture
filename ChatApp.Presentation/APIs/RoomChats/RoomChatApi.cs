@@ -19,7 +19,7 @@ namespace ChatApp.Presentation.APIs.RoomChats
         private const string BaseURL = "/api/v{version:apiVersion}/roomchats";
         public void AddRoutes(IEndpointRouteBuilder app)
         {
-            var group1 = app.NewVersionedApi("roomchats")
+            var group1 = app.NewVersionedApi("Roomchats")
                 .MapGroup(BaseURL).HasApiVersion(1).RequireAuthorization();
             group1.MapGet(string.Empty, GetAllRoomChatByUserV1);
             group1.MapPost(string.Empty, CreateRoomChatV1);

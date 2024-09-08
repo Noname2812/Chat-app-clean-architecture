@@ -1,0 +1,306 @@
+2024-09-08 00:00:33.026 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-09-08 00:03:55.291 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-09-08 00:04:16.181 +07:00 [ERR] Error parsing column 18 (SeenBy=[] - String)
+System.Data.DataException: Error parsing column 18 (SeenBy=[] - String)
+ ---> System.InvalidCastException: Invalid cast from 'System.String' to 'System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+   at System.Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at Deserialize9c265b8d-b1a5-4ba3-90b4-3543feb035c7(DbDataReader)
+   --- End of inner exception stack trace ---
+   at Dapper.SqlMapper.ThrowDataException(Exception ex, Int32 index, IDataReader reader, Object value) in /_/Dapper/SqlMapper.cs:line 3928
+   at Deserialize9c265b8d-b1a5-4ba3-90b4-3543feb035c7(DbDataReader)
+   at Dapper.SqlMapper.<>c__DisplayClass167_0`8.<GenerateMapper>b__2(DbDataReader r)
+   at Dapper.SqlMapper.MultiMapImpl[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, CommandDefinition command, Delegate map, String splitOn, DbDataReader reader, Identity identity, Boolean finalize)+MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.MultiMapAsync[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, CommandDefinition command, Delegate map, String splitOn)
+   at ChatApp.Infrastructure.Dapper.Repositories.RoomChatQueryRepository.GetRoomChatsByUserId(Nullable`1 userId)
+   at ChatApp.Application.Usecases.V1.Queries.RoomChat.GetRoomChatsByQueryHandler.Handle(GetRoomChatsByQuery request, CancellationToken cancellationToken)
+   at ChatApp.Application.Behaviors.TransactionPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at ChatApp.Application.Behaviors.PerformancePielineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at ChatApp.Application.Behaviors.ValidationPielineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken)
+   at ChatApp.Presentation.APIs.RoomChats.RoomChatApi.GetAllRoomChatByUserV1(ISender sender, ClaimsPrincipal user, String searchTerm, String sortColunm, String sortOrder)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next)
+2024-09-08 00:12:47.226 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-09-08 00:13:25.170 +07:00 [ERR] JSON text is not properly formatted. Unexpected character 'a' is found at position 1.
+Microsoft.Data.SqlClient.SqlException (0x80131904): JSON text is not properly formatted. Unexpected character 'a' is found at position 1.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Dapper.SqlMapper.MultiMapImpl[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, CommandDefinition command, Delegate map, String splitOn, DbDataReader reader, Identity identity, Boolean finalize)+MoveNext() in /_/Dapper/SqlMapper.cs:line 1586
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.MultiMapAsync[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, CommandDefinition command, Delegate map, String splitOn) in /_/Dapper/SqlMapper.Async.cs:line 943
+   at ChatApp.Infrastructure.Dapper.Repositories.RoomChatQueryRepository.GetRoomChatsByUserId(Nullable`1 userId) in D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure.Dapper\Repositories\RoomChatQueryRepository.cs:line 42
+   at ChatApp.Application.Usecases.V1.Queries.RoomChat.GetRoomChatsByQueryHandler.Handle(GetRoomChatsByQuery request, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Usecases\V1\Queries\RoomChat\GetRoomChatsByQueryHandler.cs:line 28
+   at ChatApp.Application.Behaviors.TransactionPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\TransactionPielineBehavior.cs:line 27
+   at ChatApp.Application.Behaviors.PerformancePielineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\PerformancePielineBehavior.cs:line 22
+   at ChatApp.Application.Behaviors.ValidationPielineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\ValidationPielineBehavior.cs:line 22
+   at ChatApp.Presentation.APIs.RoomChats.RoomChatApi.GetAllRoomChatByUserV1(ISender sender, ClaimsPrincipal user, String searchTerm, String sortColunm, String sortOrder) in D:\CleanArchitecture\ChatApp\ChatApp.Presentation\APIs\RoomChats\RoomChatApi.cs:line 44
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+ClientConnectionId:a6f4e33b-ac59-4a16-995d-35f6d68b4373
+Error Number:13609,State:2,Class:16
+2024-09-08 00:13:47.216 +07:00 [ERR] JSON text is not properly formatted. Unexpected character 'a' is found at position 1.
+Microsoft.Data.SqlClient.SqlException (0x80131904): JSON text is not properly formatted. Unexpected character 'a' is found at position 1.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Dapper.SqlMapper.MultiMapImpl[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, CommandDefinition command, Delegate map, String splitOn, DbDataReader reader, Identity identity, Boolean finalize)+MoveNext() in /_/Dapper/SqlMapper.cs:line 1586
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.MultiMapAsync[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, CommandDefinition command, Delegate map, String splitOn) in /_/Dapper/SqlMapper.Async.cs:line 943
+   at ChatApp.Infrastructure.Dapper.Repositories.RoomChatQueryRepository.GetRoomChatsByUserId(Nullable`1 userId) in D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure.Dapper\Repositories\RoomChatQueryRepository.cs:line 42
+   at ChatApp.Application.Usecases.V1.Queries.RoomChat.GetRoomChatsByQueryHandler.Handle(GetRoomChatsByQuery request, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Usecases\V1\Queries\RoomChat\GetRoomChatsByQueryHandler.cs:line 28
+   at ChatApp.Application.Behaviors.TransactionPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\TransactionPielineBehavior.cs:line 27
+   at ChatApp.Application.Behaviors.PerformancePielineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\PerformancePielineBehavior.cs:line 22
+   at ChatApp.Application.Behaviors.ValidationPielineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\ValidationPielineBehavior.cs:line 22
+   at ChatApp.Presentation.APIs.RoomChats.RoomChatApi.GetAllRoomChatByUserV1(ISender sender, ClaimsPrincipal user, String searchTerm, String sortColunm, String sortOrder) in D:\CleanArchitecture\ChatApp\ChatApp.Presentation\APIs\RoomChats\RoomChatApi.cs:line 44
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+ClientConnectionId:a6f4e33b-ac59-4a16-995d-35f6d68b4373
+Error Number:13609,State:2,Class:16
+2024-09-08 00:16:44.778 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-09-08 00:18:20.178 +07:00 [ERR] JSON text is not properly formatted. Unexpected character 'a' is found at position 1.
+Microsoft.Data.SqlClient.SqlException (0x80131904): JSON text is not properly formatted. Unexpected character 'a' is found at position 1.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Dapper.SqlMapper.MultiMapImpl[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, CommandDefinition command, Delegate map, String splitOn, DbDataReader reader, Identity identity, Boolean finalize)+MoveNext() in /_/Dapper/SqlMapper.cs:line 1586
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.MultiMapAsync[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, CommandDefinition command, Delegate map, String splitOn) in /_/Dapper/SqlMapper.Async.cs:line 943
+   at ChatApp.Infrastructure.Dapper.Repositories.RoomChatQueryRepository.GetRoomChatsByUserId(Nullable`1 userId) in D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure.Dapper\Repositories\RoomChatQueryRepository.cs:line 42
+   at ChatApp.Application.Usecases.V1.Queries.RoomChat.GetRoomChatsByQueryHandler.Handle(GetRoomChatsByQuery request, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Usecases\V1\Queries\RoomChat\GetRoomChatsByQueryHandler.cs:line 28
+   at ChatApp.Application.Behaviors.TransactionPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\TransactionPielineBehavior.cs:line 27
+   at ChatApp.Application.Behaviors.PerformancePielineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\PerformancePielineBehavior.cs:line 22
+   at ChatApp.Application.Behaviors.ValidationPielineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\ValidationPielineBehavior.cs:line 22
+   at ChatApp.Presentation.APIs.RoomChats.RoomChatApi.GetAllRoomChatByUserV1(ISender sender, ClaimsPrincipal user, String searchTerm, String sortColunm, String sortOrder) in D:\CleanArchitecture\ChatApp\ChatApp.Presentation\APIs\RoomChats\RoomChatApi.cs:line 44
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+ClientConnectionId:646bd9d9-866a-4827-a621-b432d3b92a58
+Error Number:13609,State:2,Class:16
+2024-09-08 00:21:18.206 +07:00 [ERR] JSON text is not properly formatted. Unexpected character '1' is found at position 2.
+Microsoft.Data.SqlClient.SqlException (0x80131904): JSON text is not properly formatted. Unexpected character '1' is found at position 2.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Dapper.SqlMapper.MultiMapImpl[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, CommandDefinition command, Delegate map, String splitOn, DbDataReader reader, Identity identity, Boolean finalize)+MoveNext() in /_/Dapper/SqlMapper.cs:line 1586
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.MultiMapAsync[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, CommandDefinition command, Delegate map, String splitOn) in /_/Dapper/SqlMapper.Async.cs:line 943
+   at ChatApp.Infrastructure.Dapper.Repositories.RoomChatQueryRepository.GetRoomChatsByUserId(Nullable`1 userId) in D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure.Dapper\Repositories\RoomChatQueryRepository.cs:line 42
+   at ChatApp.Application.Usecases.V1.Queries.RoomChat.GetRoomChatsByQueryHandler.Handle(GetRoomChatsByQuery request, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Usecases\V1\Queries\RoomChat\GetRoomChatsByQueryHandler.cs:line 28
+   at ChatApp.Application.Behaviors.TransactionPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\TransactionPielineBehavior.cs:line 27
+   at ChatApp.Application.Behaviors.PerformancePielineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\PerformancePielineBehavior.cs:line 22
+   at ChatApp.Application.Behaviors.ValidationPielineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\ValidationPielineBehavior.cs:line 22
+   at ChatApp.Presentation.APIs.RoomChats.RoomChatApi.GetAllRoomChatByUserV1(ISender sender, ClaimsPrincipal user, String searchTerm, String sortColunm, String sortOrder) in D:\CleanArchitecture\ChatApp\ChatApp.Presentation\APIs\RoomChats\RoomChatApi.cs:line 44
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+ClientConnectionId:646bd9d9-866a-4827-a621-b432d3b92a58
+Error Number:13609,State:2,Class:16
+2024-09-08 00:21:23.571 +07:00 [ERR] JSON text is not properly formatted. Unexpected character '1' is found at position 2.
+Microsoft.Data.SqlClient.SqlException (0x80131904): JSON text is not properly formatted. Unexpected character '1' is found at position 2.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Dapper.SqlMapper.MultiMapImpl[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, CommandDefinition command, Delegate map, String splitOn, DbDataReader reader, Identity identity, Boolean finalize)+MoveNext() in /_/Dapper/SqlMapper.cs:line 1586
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.MultiMapAsync[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, CommandDefinition command, Delegate map, String splitOn) in /_/Dapper/SqlMapper.Async.cs:line 943
+   at ChatApp.Infrastructure.Dapper.Repositories.RoomChatQueryRepository.GetRoomChatsByUserId(Nullable`1 userId) in D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure.Dapper\Repositories\RoomChatQueryRepository.cs:line 42
+   at ChatApp.Application.Usecases.V1.Queries.RoomChat.GetRoomChatsByQueryHandler.Handle(GetRoomChatsByQuery request, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Usecases\V1\Queries\RoomChat\GetRoomChatsByQueryHandler.cs:line 28
+   at ChatApp.Application.Behaviors.TransactionPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\TransactionPielineBehavior.cs:line 27
+   at ChatApp.Application.Behaviors.PerformancePielineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\PerformancePielineBehavior.cs:line 22
+   at ChatApp.Application.Behaviors.ValidationPielineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\ValidationPielineBehavior.cs:line 22
+   at ChatApp.Presentation.APIs.RoomChats.RoomChatApi.GetAllRoomChatByUserV1(ISender sender, ClaimsPrincipal user, String searchTerm, String sortColunm, String sortOrder) in D:\CleanArchitecture\ChatApp\ChatApp.Presentation\APIs\RoomChats\RoomChatApi.cs:line 44
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+ClientConnectionId:646bd9d9-866a-4827-a621-b432d3b92a58
+Error Number:13609,State:2,Class:16
+2024-09-08 00:21:42.980 +07:00 [ERR] JSON text is not properly formatted. Unexpected character ']' is found at position 2.
+Microsoft.Data.SqlClient.SqlException (0x80131904): JSON text is not properly formatted. Unexpected character ']' is found at position 2.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Dapper.SqlMapper.MultiMapImpl[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, CommandDefinition command, Delegate map, String splitOn, DbDataReader reader, Identity identity, Boolean finalize)+MoveNext() in /_/Dapper/SqlMapper.cs:line 1586
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.MultiMapAsync[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, CommandDefinition command, Delegate map, String splitOn) in /_/Dapper/SqlMapper.Async.cs:line 943
+   at ChatApp.Infrastructure.Dapper.Repositories.RoomChatQueryRepository.GetRoomChatsByUserId(Nullable`1 userId) in D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure.Dapper\Repositories\RoomChatQueryRepository.cs:line 42
+   at ChatApp.Application.Usecases.V1.Queries.RoomChat.GetRoomChatsByQueryHandler.Handle(GetRoomChatsByQuery request, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Usecases\V1\Queries\RoomChat\GetRoomChatsByQueryHandler.cs:line 28
+   at ChatApp.Application.Behaviors.TransactionPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\TransactionPielineBehavior.cs:line 27
+   at ChatApp.Application.Behaviors.PerformancePielineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\PerformancePielineBehavior.cs:line 22
+   at ChatApp.Application.Behaviors.ValidationPielineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\ValidationPielineBehavior.cs:line 22
+   at ChatApp.Presentation.APIs.RoomChats.RoomChatApi.GetAllRoomChatByUserV1(ISender sender, ClaimsPrincipal user, String searchTerm, String sortColunm, String sortOrder) in D:\CleanArchitecture\ChatApp\ChatApp.Presentation\APIs\RoomChats\RoomChatApi.cs:line 44
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+ClientConnectionId:646bd9d9-866a-4827-a621-b432d3b92a58
+Error Number:13609,State:2,Class:16
+2024-09-08 00:28:12.802 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-09-08 00:28:41.056 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-09-08 00:29:20.001 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-09-08 00:29:38.206 +07:00 [ERR] Invalid column name 'SeenBy'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'SeenBy'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.MultiMapAsync[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, CommandDefinition command, Delegate map, String splitOn) in /_/Dapper/SqlMapper.Async.cs:line 940
+   at ChatApp.Infrastructure.Dapper.Repositories.RoomChatQueryRepository.GetRoomChatsByUserId(Nullable`1 userId) in D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure.Dapper\Repositories\RoomChatQueryRepository.cs:line 42
+   at ChatApp.Application.Usecases.V1.Queries.RoomChat.GetRoomChatsByQueryHandler.Handle(GetRoomChatsByQuery request, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Usecases\V1\Queries\RoomChat\GetRoomChatsByQueryHandler.cs:line 28
+   at ChatApp.Application.Behaviors.TransactionPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\TransactionPielineBehavior.cs:line 27
+   at ChatApp.Application.Behaviors.PerformancePielineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\PerformancePielineBehavior.cs:line 22
+   at ChatApp.Application.Behaviors.ValidationPielineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\ValidationPielineBehavior.cs:line 22
+   at ChatApp.Presentation.APIs.RoomChats.RoomChatApi.GetAllRoomChatByUserV1(ISender sender, ClaimsPrincipal user, String searchTerm, String sortColunm, String sortOrder) in D:\CleanArchitecture\ChatApp\ChatApp.Presentation\APIs\RoomChats\RoomChatApi.cs:line 44
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+ClientConnectionId:17000e26-e495-4a42-a9fb-34ae44db1c36
+Error Number:207,State:1,Class:16
+2024-09-08 00:31:15.385 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-09-08 00:31:35.364 +07:00 [ERR] JSON text is not properly formatted. Unexpected character '.' is found at position 0.
+Microsoft.Data.SqlClient.SqlException (0x80131904): JSON text is not properly formatted. Unexpected character '.' is found at position 0.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Dapper.SqlMapper.MultiMapImpl[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, CommandDefinition command, Delegate map, String splitOn, DbDataReader reader, Identity identity, Boolean finalize)+MoveNext() in /_/Dapper/SqlMapper.cs:line 1586
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.MultiMapAsync[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, CommandDefinition command, Delegate map, String splitOn) in /_/Dapper/SqlMapper.Async.cs:line 943
+   at ChatApp.Infrastructure.Dapper.Repositories.RoomChatQueryRepository.GetRoomChatsByUserId(Nullable`1 userId) in D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure.Dapper\Repositories\RoomChatQueryRepository.cs:line 42
+   at ChatApp.Application.Usecases.V1.Queries.RoomChat.GetRoomChatsByQueryHandler.Handle(GetRoomChatsByQuery request, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Usecases\V1\Queries\RoomChat\GetRoomChatsByQueryHandler.cs:line 28
+   at ChatApp.Application.Behaviors.TransactionPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\TransactionPielineBehavior.cs:line 27
+   at ChatApp.Application.Behaviors.PerformancePielineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\PerformancePielineBehavior.cs:line 22
+   at ChatApp.Application.Behaviors.ValidationPielineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\ValidationPielineBehavior.cs:line 22
+   at ChatApp.Presentation.APIs.RoomChats.RoomChatApi.GetAllRoomChatByUserV1(ISender sender, ClaimsPrincipal user, String searchTerm, String sortColunm, String sortOrder) in D:\CleanArchitecture\ChatApp\ChatApp.Presentation\APIs\RoomChats\RoomChatApi.cs:line 44
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+ClientConnectionId:b9f68a32-1e55-4ac0-ad8c-f63a1ab039f9
+Error Number:13609,State:2,Class:16
+2024-09-08 00:32:56.627 +07:00 [ERR] JSON text is not properly formatted. Unexpected character '.' is found at position 0.
+Microsoft.Data.SqlClient.SqlException (0x80131904): JSON text is not properly formatted. Unexpected character '.' is found at position 0.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Dapper.SqlMapper.MultiMapImpl[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, CommandDefinition command, Delegate map, String splitOn, DbDataReader reader, Identity identity, Boolean finalize)+MoveNext() in /_/Dapper/SqlMapper.cs:line 1586
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.MultiMapAsync[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, CommandDefinition command, Delegate map, String splitOn) in /_/Dapper/SqlMapper.Async.cs:line 943
+   at ChatApp.Infrastructure.Dapper.Repositories.RoomChatQueryRepository.GetRoomChatsByUserId(Nullable`1 userId) in D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure.Dapper\Repositories\RoomChatQueryRepository.cs:line 42
+   at ChatApp.Application.Usecases.V1.Queries.RoomChat.GetRoomChatsByQueryHandler.Handle(GetRoomChatsByQuery request, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Usecases\V1\Queries\RoomChat\GetRoomChatsByQueryHandler.cs:line 28
+   at ChatApp.Application.Behaviors.TransactionPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\TransactionPielineBehavior.cs:line 27
+   at ChatApp.Application.Behaviors.PerformancePielineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\PerformancePielineBehavior.cs:line 22
+   at ChatApp.Application.Behaviors.ValidationPielineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\ValidationPielineBehavior.cs:line 22
+   at ChatApp.Presentation.APIs.RoomChats.RoomChatApi.GetAllRoomChatByUserV1(ISender sender, ClaimsPrincipal user, String searchTerm, String sortColunm, String sortOrder) in D:\CleanArchitecture\ChatApp\ChatApp.Presentation\APIs\RoomChats\RoomChatApi.cs:line 44
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+ClientConnectionId:7004bed6-6d09-48f8-898d-455ae4e0eac0
+Error Number:13609,State:2,Class:16
+2024-09-08 00:34:11.674 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-09-08 00:36:51.061 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-09-08 20:52:45.395 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.

@@ -2,6 +2,7 @@
 
 using ChatApp.Application.Abstractions.Services;
 using ChatApp.Contract.Abstractions.Message;
+using static ChatApp.Contract.Services.V1.ChatHub.DomainEvent;
 using static ChatApp.Contract.Services.V1.Identty.DomainEvent;
 
 namespace ChatApp.Application.Usecases.V1.Events.Authentication
@@ -20,5 +21,7 @@ namespace ChatApp.Application.Usecases.V1.Events.Authentication
             // update cache
             await _redisService.SetData($"list-refresh-token:{notification.User.Id}", notification.RefreshToken, TimeSpan.FromDays(1));
         }
+
+       
     }
 }

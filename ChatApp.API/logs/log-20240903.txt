@@ -1,0 +1,31 @@
+2024-09-03 18:11:40.029 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-09-03 18:13:43.519 +07:00 [WRN] Long time Running - Request detail GetRoomChatsByQuery (7101 milliseconds) {"UserId":"626a88ee-b86a-4f86-2a2d-08dcca6e1428","SearchTerm":null,"SortColunm":null,"SortOrder":{"Name":"Descending","Value":2,"$type":"SortOrder"},"$type":"GetRoomChatsByQuery"}
+2024-09-03 18:15:32.920 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-09-03 18:15:53.744 +07:00 [ERR] Multi-map error: splitOn column 'RoomChatId' was not found - please ensure your splitOn parameter is set and in the correct order (Parameter 'splitOn')
+System.ArgumentException: Multi-map error: splitOn column 'RoomChatId' was not found - please ensure your splitOn parameter is set and in the correct order (Parameter 'splitOn')
+   at Dapper.SqlMapper.GetNextSplit(Int32 startIdx, String splitOn, DbDataReader reader) in /_/Dapper/SqlMapper.cs:line 1818
+   at Dapper.SqlMapper.GenerateDeserializers(Identity identity, String splitOn, DbDataReader reader) in /_/Dapper/SqlMapper.cs:line 1763
+   at Dapper.SqlMapper.MultiMapImpl[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, CommandDefinition command, Delegate map, String splitOn, DbDataReader reader, Identity identity, Boolean finalize)+MoveNext() in /_/Dapper/SqlMapper.cs:line 1576
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.MultiMapAsync[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, CommandDefinition command, Delegate map, String splitOn) in /_/Dapper/SqlMapper.Async.cs:line 943
+   at ChatApp.Infrastructure.Dapper.Repositories.RoomChatQueryRepository.GetRoomChatByUserId(Nullable`1 userId) in D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure.Dapper\Repositories\RoomChatQueryRepository.cs:line 40
+   at ChatApp.Application.Usecases.V1.Queries.RoomChat.GetRoomChatsByQueryHandler.Handle(GetRoomChatsByQuery request, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Usecases\V1\Queries\RoomChat\GetRoomChatsByQueryHandler.cs:line 29
+   at ChatApp.Application.Behaviors.TransactionPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\TransactionPielineBehavior.cs:line 27
+   at ChatApp.Application.Behaviors.PerformancePielineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\PerformancePielineBehavior.cs:line 22
+   at ChatApp.Application.Behaviors.ValidationPielineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\ValidationPielineBehavior.cs:line 22
+   at ChatApp.Presentation.APIs.RoomChats.RoomChatApi.GetAllRoomChatByUserV1(ISender sender, ClaimsPrincipal user, String searchTerm, String sortColunm, String sortOrder) in D:\CleanArchitecture\ChatApp\ChatApp.Presentation\APIs\RoomChats\RoomChatApi.cs:line 44
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 21
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-03 18:19:14.828 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-09-03 18:23:40.327 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-09-03 18:25:53.578 +07:00 [WRN] Long time Running - Request detail GetRoomChatsByQuery (111392 milliseconds) {"UserId":"626a88ee-b86a-4f86-2a2d-08dcca6e1428","SearchTerm":null,"SortColunm":null,"SortOrder":{"Name":"Descending","Value":2,"$type":"SortOrder"},"$type":"GetRoomChatsByQuery"}
+2024-09-03 18:29:30.214 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-09-03 22:46:52.077 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.

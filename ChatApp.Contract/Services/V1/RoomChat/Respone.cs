@@ -10,7 +10,7 @@ namespace ChatApp.Contract.Services.V1.RoomChat
             public string Name { get; set; }
             public bool IsGroup { get; set; } = false;
             public List<ConversationParticipantRespone>? ConversationParticipants { get; set; }
-            //public List<>? Messages { get; set; }
+            public List<MessageDTO>? Messages { get; set; }
         }
         public class ConversationParticipantRespone
         {

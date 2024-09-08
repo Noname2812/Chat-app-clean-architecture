@@ -15,6 +15,7 @@ namespace ChatApp.Persistence.Configurations
             builder.ToTable(TableNames.Message);
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Type).HasDefaultValue(TypeMessage.String).HasConversion<int>();
+            builder.Property(x => x.Status).HasDefaultValue(StatusMessage.Sent).HasConversion<int>();
         }
     }
 }

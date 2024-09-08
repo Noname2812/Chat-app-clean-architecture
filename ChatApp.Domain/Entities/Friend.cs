@@ -1,12 +1,13 @@
 ﻿
 
+using ChatApp.Domain.Abstractions;
 using ChatApp.Domain.Abstractions.Entities;
 using ChatApp.Domain.Entities.Identity;
 using ChatApp.Domain.Enums;
 
 namespace ChatApp.Domain.Entities
 {
-    public class Friend : IDateTracking
+    public class Friend : EntityBase<Guid>,IDateTracking
     {
         public Guid UserId { get; set; }
         public Guid FriendId { get; set; }

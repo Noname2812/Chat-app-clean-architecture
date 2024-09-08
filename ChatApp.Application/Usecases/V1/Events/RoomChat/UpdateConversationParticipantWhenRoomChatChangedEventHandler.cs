@@ -1,6 +1,4 @@
-﻿
-
-using ChatApp.Contract.Abstractions.Message;
+﻿using ChatApp.Contract.Abstractions.Message;
 using static ChatApp.Contract.Services.V1.RoomChat.DomainEvent;
 
 namespace ChatApp.Application.Usecases.V1.Events.RoomChat

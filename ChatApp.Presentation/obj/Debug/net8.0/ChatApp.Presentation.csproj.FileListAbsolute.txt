@@ -41,3 +41,5 @@ D:\CleanArchitecture\ChatApp\ChatApp.Presentation\obj\Debug\net8.0\ChatApp.Prese
 D:\CleanArchitecture\ChatApp\ChatApp.Presentation\obj\Debug\net8.0\refint\ChatApp.Presentation.dll
 D:\CleanArchitecture\ChatApp\ChatApp.Presentation\obj\Debug\net8.0\ChatApp.Presentation.pdb
 D:\CleanArchitecture\ChatApp\ChatApp.Presentation\obj\Debug\net8.0\ref\ChatApp.Presentation.dll
+D:\CleanArchitecture\ChatApp\ChatApp.Presentation\bin\Debug\net8.0\ChatApp.Infrastructure.Dapper.dll
+D:\CleanArchitecture\ChatApp\ChatApp.Presentation\bin\Debug\net8.0\ChatApp.Infrastructure.Dapper.pdb

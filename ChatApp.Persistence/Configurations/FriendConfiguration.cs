@@ -13,6 +13,7 @@ namespace ChatApp.Persistence.Configurations
         public void Configure(EntityTypeBuilder<Friend> builder)
         {
             builder.ToTable(TableNames.Friend);
+            builder.Ignore(f => f.Id);
             builder.HasKey(x => new { x.UserId, x.FriendId });
             builder.Property(x => x.Status).HasDefaultValue(StatusFriend.Pending).HasConversion<int>();
 

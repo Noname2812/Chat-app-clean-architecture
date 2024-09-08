@@ -5,7 +5,6 @@ using ChatApp.Application.Abstractions;
 using ChatApp.Contract.Abstractions.Message;
 using ChatApp.Contract.Abstractions.Shared;
 using ChatApp.Contract.Services.V1.RoomChat;
-using ChatApp.Domain.Abstractions;
 using ChatApp.Domain.Abstractions.Repositories;
 using ChatApp.Domain.Exceptions;
 using MediatR;

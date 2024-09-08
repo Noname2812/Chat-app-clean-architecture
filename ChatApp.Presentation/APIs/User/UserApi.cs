@@ -17,7 +17,7 @@ namespace ChatApp.Presentation.APIs.User
         private const string BaseURL = "/api/v{version:apiVersion}/user";
         public void AddRoutes(IEndpointRouteBuilder app)
         {
-            var group1 = app.NewVersionedApi("user")
+            var group1 = app.NewVersionedApi("User")
               .MapGroup(BaseURL).HasApiVersion(1).RequireAuthorization();
             group1.MapGet("/vertify/{userId}", GetCodeVertifyAccountV1);
             group1.MapPost("/vertify/{userId}", VertifyAccountV1);
