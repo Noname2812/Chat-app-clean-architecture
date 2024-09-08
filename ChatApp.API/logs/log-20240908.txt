@@ -304,3 +304,770 @@ Error Number:13609,State:2,Class:16
 2024-09-08 00:34:11.674 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
 2024-09-08 00:36:51.061 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
 2024-09-08 20:52:45.395 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-09-08 21:32:58.057 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-09-08 21:41:54.841 +07:00 [FTL] Application startup exception
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Cors.Infrastructure.ICorsService' while attempting to activate 'Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2024-09-08 21:41:54.961 +07:00 [ERR] Hosting failed to start
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Cors.Infrastructure.ICorsService' while attempting to activate 'Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2024-09-08 21:41:55.001 +07:00 [FTL] An unhanled exception occured during boostrapping 
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Cors.Infrastructure.ICorsService' while attempting to activate 'Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Program.<Main>$(String[] args) in D:\CleanArchitecture\ChatApp\ChatApp.API\Program.cs:line 93
+2024-09-08 21:42:21.221 +07:00 [FTL] Application startup exception
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Cors.Infrastructure.ICorsService' while attempting to activate 'Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2024-09-08 21:42:21.273 +07:00 [ERR] Hosting failed to start
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Cors.Infrastructure.ICorsService' while attempting to activate 'Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2024-09-08 21:42:21.314 +07:00 [FTL] An unhanled exception occured during boostrapping 
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Cors.Infrastructure.ICorsService' while attempting to activate 'Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Program.<Main>$(String[] args) in D:\CleanArchitecture\ChatApp\ChatApp.API\Program.cs:line 93
+2024-09-08 21:42:43.214 +07:00 [FTL] Application startup exception
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Cors.Infrastructure.ICorsService' while attempting to activate 'Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2024-09-08 21:42:43.286 +07:00 [ERR] Hosting failed to start
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Cors.Infrastructure.ICorsService' while attempting to activate 'Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2024-09-08 21:42:43.324 +07:00 [FTL] An unhanled exception occured during boostrapping 
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Cors.Infrastructure.ICorsService' while attempting to activate 'Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Program.<Main>$(String[] args) in D:\CleanArchitecture\ChatApp\ChatApp.API\Program.cs:line 93
+2024-09-08 21:43:45.894 +07:00 [FTL] Application startup exception
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Cors.Infrastructure.ICorsService' while attempting to activate 'Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2024-09-08 21:43:45.943 +07:00 [ERR] Hosting failed to start
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Cors.Infrastructure.ICorsService' while attempting to activate 'Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2024-09-08 21:43:45.977 +07:00 [FTL] An unhanled exception occured during boostrapping 
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Cors.Infrastructure.ICorsService' while attempting to activate 'Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.ReflectionMiddlewareBinder.CreateMiddleware(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Program.<Main>$(String[] args) in D:\CleanArchitecture\ChatApp\ChatApp.API\Program.cs:line 93
+2024-09-08 21:51:33.899 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-09-08 21:51:49.862 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-09-08 21:51:52.776 +07:00 [ERR] Email or Password invalid
+ChatApp.Domain.Exceptions.IdentityException+InvalidUser: Email or Password invalid
+   at ChatApp.Application.Usecases.V1.Queries.Identity.GetLoginHandler.Handle(LoginQuery request, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Usecases\V1\Queries\Authentication\GetLoginHandler.cs:line 56
+   at ChatApp.Application.Behaviors.TransactionPipelineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\TransactionPielineBehavior.cs:line 27
+   at ChatApp.Application.Behaviors.PerformancePielineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\PerformancePielineBehavior.cs:line 22
+   at ChatApp.Application.Behaviors.ValidationPielineBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Behaviors\ValidationPielineBehavior.cs:line 34
+   at ChatApp.Presentation.APIs.Identity.AuthApi.LoginV1(ISender sender, LoginQuery login) in D:\CleanArchitecture\ChatApp\ChatApp.Presentation\APIs\Identity\AuthApi.cs:line 29
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass102_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:04:42.204 +07:00 [ERR] Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Guid.Parse(String input)
+   at ChatApp.Infrastructure.Hubs.HubService.JoinGroupChat(String ConnectionId, String UserId) in D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure\Hubs\HubService.cs:line 19
+   at ChatApp.Application.Usecases.V1.Events.Hub.HubEventHandler.Handle(SignedInHubEvent notification, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Usecases\V1\Events\Hub\HubEventHandler.cs:line 25
+   at MediatR.NotificationPublishers.ForeachAwaitPublisher.Publish(IEnumerable`1 handlerExecutors, INotification notification, CancellationToken cancellationToken)
+   at ChatApp.Infrastructure.Hubs.ChatHub.OnConnectedAsync() in D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure\Hubs\ChatHub.cs:line 26
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2024-09-08 22:06:11.033 +07:00 [ERR] Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Guid.Parse(String input)
+   at ChatApp.Infrastructure.Hubs.HubService.JoinGroupChat(String ConnectionId, String UserId) in D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure\Hubs\HubService.cs:line 19
+   at ChatApp.Application.Usecases.V1.Events.Hub.HubEventHandler.Handle(SignedInHubEvent notification, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Usecases\V1\Events\Hub\HubEventHandler.cs:line 25
+   at MediatR.NotificationPublishers.ForeachAwaitPublisher.Publish(IEnumerable`1 handlerExecutors, INotification notification, CancellationToken cancellationToken)
+   at ChatApp.Infrastructure.Hubs.ChatHub.OnConnectedAsync() in D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure\Hubs\ChatHub.cs:line 26
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2024-09-08 22:07:56.507 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-09-08 22:08:01.826 +07:00 [ERR] Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Guid.Parse(String input)
+   at ChatApp.Infrastructure.Hubs.HubService.JoinGroupChat(String ConnectionId, String UserId) in D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure\Hubs\HubService.cs:line 19
+   at ChatApp.Application.Usecases.V1.Events.Hub.HubEventHandler.Handle(SignedInHubEvent notification, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Usecases\V1\Events\Hub\HubEventHandler.cs:line 25
+   at MediatR.NotificationPublishers.ForeachAwaitPublisher.Publish(IEnumerable`1 handlerExecutors, INotification notification, CancellationToken cancellationToken)
+   at ChatApp.Infrastructure.Hubs.ChatHub.OnConnectedAsync() in D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure\Hubs\ChatHub.cs:line 26
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2024-09-08 22:09:49.301 +07:00 [ERR] Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Guid.Parse(String input)
+   at ChatApp.Infrastructure.Hubs.HubService.JoinGroupChat(String ConnectionId, String UserId) in D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure\Hubs\HubService.cs:line 19
+   at ChatApp.Application.Usecases.V1.Events.Hub.HubEventHandler.Handle(SignedInHubEvent notification, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Usecases\V1\Events\Hub\HubEventHandler.cs:line 25
+   at MediatR.NotificationPublishers.ForeachAwaitPublisher.Publish(IEnumerable`1 handlerExecutors, INotification notification, CancellationToken cancellationToken)
+   at ChatApp.Infrastructure.Hubs.ChatHub.OnConnectedAsync() in D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure\Hubs\ChatHub.cs:line 26
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2024-09-08 22:09:53.675 +07:00 [ERR] Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Guid.Parse(String input)
+   at ChatApp.Infrastructure.Hubs.HubService.JoinGroupChat(String ConnectionId, String UserId) in D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure\Hubs\HubService.cs:line 19
+   at ChatApp.Application.Usecases.V1.Events.Hub.HubEventHandler.Handle(SignedInHubEvent notification, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Usecases\V1\Events\Hub\HubEventHandler.cs:line 25
+   at MediatR.NotificationPublishers.ForeachAwaitPublisher.Publish(IEnumerable`1 handlerExecutors, INotification notification, CancellationToken cancellationToken)
+   at ChatApp.Infrastructure.Hubs.ChatHub.OnConnectedAsync() in D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure\Hubs\ChatHub.cs:line 26
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2024-09-08 22:14:30.933 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-09-08 22:14:34.444 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-09-08 22:16:49.030 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-09-08 22:16:52.954 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-09-08 22:16:56.107 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:16:56.107 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-friends".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-friends".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:17:40.864 +07:00 [ERR] Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Guid.Parse(String input)
+   at ChatApp.Infrastructure.Hubs.HubService.JoinGroupChat(String ConnectionId, String UserId) in D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure\Hubs\HubService.cs:line 19
+   at ChatApp.Application.Usecases.V1.Events.Hub.HubEventHandler.Handle(SignedInHubEvent notification, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Usecases\V1\Events\Hub\HubEventHandler.cs:line 25
+   at MediatR.NotificationPublishers.ForeachAwaitPublisher.Publish(IEnumerable`1 handlerExecutors, INotification notification, CancellationToken cancellationToken)
+   at ChatApp.Infrastructure.Hubs.ChatHub.OnConnectedAsync() in D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure\Hubs\ChatHub.cs:line 26
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2024-09-08 22:17:41.512 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:17:41.546 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-friends".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-friends".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:18:29.787 +07:00 [ERR] Error when dispatching 'OnConnectedAsync' on hub.
+System.ArgumentNullException: Value cannot be null. (Parameter 'input')
+   at System.ArgumentNullException.Throw(String paramName)
+   at System.Guid.Parse(String input)
+   at ChatApp.Infrastructure.Hubs.HubService.JoinGroupChat(String ConnectionId, String UserId) in D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure\Hubs\HubService.cs:line 19
+   at ChatApp.Application.Usecases.V1.Events.Hub.HubEventHandler.Handle(SignedInHubEvent notification, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Usecases\V1\Events\Hub\HubEventHandler.cs:line 25
+   at MediatR.NotificationPublishers.ForeachAwaitPublisher.Publish(IEnumerable`1 handlerExecutors, INotification notification, CancellationToken cancellationToken)
+   at ChatApp.Infrastructure.Hubs.ChatHub.OnConnectedAsync() in D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure\Hubs\ChatHub.cs:line 26
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2024-09-08 22:19:23.779 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-09-08 22:19:25.865 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-friends".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-friends".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:19:25.865 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:19:34.579 +07:00 [ERR] Timeout awaiting response (outbound=0KiB, inbound=0KiB, 7344ms elapsed, timeout is 5000ms), command=HMGET, next: HMGET black-list-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjYyNmE4OGVlLWI4NmEtNGY4Ni0yYTJkLTA4ZGNjYTZlMTQyOCIsImV4cCI6MTcyNTgwODkxNCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MTE3IiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo1MTE3In0.Xhc_7Qfql5wke5aPInqbqEF3oggYhtSAtWFNiQkoVqU, inst: 0, qu: 0, qs: 1, aw: False, bw: SpinningDown, rs: DequeueResult, ws: Idle, in: 0, in-pipe: 19, out-pipe: 0, last-in: 0, cur-in: 19, sync-ops: 2, async-ops: 10, serverEndpoint: redis-16688.c244.us-east-1-2.ec2.redns.redis-cloud.com:16688, conn-sec: 9.39, aoc: 0, mc: 1/1/0, mgr: 9 of 10 available, clientName: DESKTOP-17SVGAK(SE.Redis-v2.8.0.27420), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=2,Free=32765,Min=8,Max=32767), POOL: (Threads=8,QueuedItems=0,CompletedItems=354,Timers=4), v: 2.8.0.27420 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+StackExchange.Redis.RedisTimeoutException: Timeout awaiting response (outbound=0KiB, inbound=0KiB, 7344ms elapsed, timeout is 5000ms), command=HMGET, next: HMGET black-list-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjYyNmE4OGVlLWI4NmEtNGY4Ni0yYTJkLTA4ZGNjYTZlMTQyOCIsImV4cCI6MTcyNTgwODkxNCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MTE3IiwiYXVkIjoiaHR0cDovL2xvY2FsaG9zdDo1MTE3In0.Xhc_7Qfql5wke5aPInqbqEF3oggYhtSAtWFNiQkoVqU, inst: 0, qu: 0, qs: 1, aw: False, bw: SpinningDown, rs: DequeueResult, ws: Idle, in: 0, in-pipe: 19, out-pipe: 0, last-in: 0, cur-in: 19, sync-ops: 2, async-ops: 10, serverEndpoint: redis-16688.c244.us-east-1-2.ec2.redns.redis-cloud.com:16688, conn-sec: 9.39, aoc: 0, mc: 1/1/0, mgr: 9 of 10 available, clientName: DESKTOP-17SVGAK(SE.Redis-v2.8.0.27420), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=2,Free=32765,Min=8,Max=32767), POOL: (Threads=8,QueuedItems=0,CompletedItems=354,Timers=4), v: 2.8.0.27420 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.GetAndRefreshAsync(String key, Boolean getData, CancellationToken token)
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.GetAsync(String key, CancellationToken token)
+   at Microsoft.Extensions.Caching.Distributed.DistributedCacheExtensions.GetStringAsync(IDistributedCache cache, String key, CancellationToken token)
+   at ChatApp.Infrastructure.Caching.RedisService.GetDataByKey(String key) in D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure\Caching\RedisService.cs:line 21
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 15
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:19:48.868 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-09-08 22:20:26.408 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:20:26.513 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-friends".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-friends".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:21:29.173 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:21:29.174 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-friends".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-friends".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:21:58.113 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-friends".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-friends".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:21:58.088 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:22:12.896 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:22:12.896 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-friends".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-friends".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:26:10.828 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-09-08 22:26:14.187 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-09-08 22:26:17.165 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-friends".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-friends".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:26:17.138 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:27:36.718 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-friends".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-friends".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:27:36.718 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:28:09.317 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:28:09.317 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-friends".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-friends".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:28:29.116 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:28:29.142 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-friends".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-friends".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:28:50.573 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:28:50.600 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-friends".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-friends".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:29:09.866 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:29:09.866 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-friends".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-friends".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:29:43.202 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-friends".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-friends".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:29:43.297 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:30:24.868 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-friends".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-friends".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:30:24.916 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:31:28.835 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:31:28.892 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-friends".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-friends".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:32:02.996 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:32:41.248 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:34:27.802 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:38:25.636 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-09-08 22:38:28.796 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-09-08 22:38:55.580 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:39:10.302 +07:00 [ERR] Error when dispatching 'OnConnectedAsync' on hub.
+StackExchange.Redis.RedisTimeoutException: Timeout awaiting response (outbound=0KiB, inbound=0KiB, 14281ms elapsed, timeout is 5000ms), command=EVAL, next: EVAL, inst: 0, qu: 0, qs: 1, aw: False, bw: Inactive, rs: DequeueResult, ws: Idle, in: 0, in-pipe: 4, out-pipe: 0, last-in: 0, cur-in: 4, sync-ops: 2, async-ops: 11, serverEndpoint: redis-16688.c244.us-east-1-2.ec2.redns.redis-cloud.com:16688, conn-sec: 43.38, aoc: 0, mc: 1/1/0, mgr: 9 of 10 available, clientName: DESKTOP-17SVGAK(SE.Redis-v2.8.0.27420), IOCP: (Busy=0,Free=1000,Min=1,Max=1000), WORKER: (Busy=1,Free=32766,Min=8,Max=32767), POOL: (Threads=6,QueuedItems=0,CompletedItems=450,Timers=6), v: 2.8.0.27420 (Please take a look at this article for some common client-side issues that can cause timeouts: https://stackexchange.github.io/StackExchange.Redis/Timeouts)
+   at StackExchange.Redis.RedisDatabase.ScriptEvaluateAsync(String script, RedisKey[] keys, RedisValue[] values, CommandFlags flags) in /_/src/StackExchange.Redis/RedisDatabase.cs:line 1551
+   at Microsoft.Extensions.Caching.StackExchangeRedis.RedisCache.SetAsync(String key, Byte[] value, DistributedCacheEntryOptions options, CancellationToken token)
+   at ChatApp.Infrastructure.Caching.RedisService.SetData(String key, Object data, TimeSpan exprationTime) in D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure\Caching\RedisService.cs:line 43
+   at ChatApp.Application.Usecases.V1.Events.Hub.HubEventHandler.Handle(SignedInHubEvent notification, CancellationToken cancellationToken) in D:\CleanArchitecture\ChatApp\ChatApp.Application\Usecases\V1\Events\Hub\HubEventHandler.cs:line 25
+   at MediatR.NotificationPublishers.ForeachAwaitPublisher.Publish(IEnumerable`1 handlerExecutors, INotification notification, CancellationToken cancellationToken)
+   at ChatApp.Infrastructure.Hubs.ChatHub.OnConnectedAsync() in D:\CleanArchitecture\ChatApp\ChatApp.Infrastructure\Hubs\ChatHub.cs:line 29
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.Internal.DefaultHubDispatcher`1.OnConnectedAsync(HubConnectionContext connection)
+   at Microsoft.AspNetCore.SignalR.HubConnectionHandler`1.RunHubAsync(HubConnectionContext connection)
+2024-09-08 22:40:11.702 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-09-08 22:40:14.629 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-09-08 22:40:33.067 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:41:57.464 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:44:00.222 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:44:25.421 +07:00 [ERR] Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+Microsoft.AspNetCore.Http.BadHttpRequestException: Failed to bind parameter "Guid userId" from "get-list-add-friend-requests".
+   at lambda_method107(Closure, Object, HttpContext)
+   at Asp.Versioning.Routing.ReportApiVersionsDecorator.<>c__DisplayClass4_0.<op_Implicit>b__0(HttpContext context)
+   at ChatApp.API.Middleware.BlackListTokenMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\BlackListTokenMiddleware.cs:line 24
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.InterfaceMiddlewareBinder.<>c__DisplayClass2_0.<<CreateMiddleware>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ChatApp.API.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in D:\CleanArchitecture\ChatApp\ChatApp.API\Middleware\ExceptionHandlingMiddleware.cs:line 18
+2024-09-08 22:47:00.940 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-09-08 22:47:03.966 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-09-08 22:53:08.791 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-09-08 22:53:12.475 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-09-08 22:58:51.386 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-09-08 22:59:18.962 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2024-09-08 23:00:43.129 +07:00 [WRN] Failed to determine the https port for redirect.
+2024-09-08 23:01:51.044 +07:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.

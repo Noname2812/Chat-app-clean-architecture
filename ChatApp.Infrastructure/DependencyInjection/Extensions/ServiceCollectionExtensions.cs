@@ -30,7 +30,12 @@ public static class ServiceCollectionExtensions
     }
     public static void AddConfigurationSignalR(this IServiceCollection services) 
     {
-        services.AddSignalR();
+        services.AddSignalR(options =>
+        {
+            options.KeepAliveInterval = TimeSpan.FromSeconds(15); // Điều chỉnh thời gian cho các gói giữ kết nối
+            options.HandshakeTimeout = TimeSpan.FromSeconds(15); // Điều chỉnh thời gian chờ cho handshake
+            options.EnableDetailedErrors = true;
+        });
         services.AddTransient<IHubService, HubService>();
     }
 }

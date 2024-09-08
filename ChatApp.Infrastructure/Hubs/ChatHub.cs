@@ -1,6 +1,8 @@
 ﻿using ChatApp.Contract.DTOs;
 using ChatApp.Domain.Enums;
 using MediatR;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.SignalR;
 using System.Security.Claims;
 using static ChatApp.Contract.Services.V1.ChatHub.DomainEvent;
@@ -10,6 +12,7 @@ using static ChatApp.Contract.Services.V1.Message.DomainEvent;
 
 namespace ChatApp.Infrastructure.Hubs
 {
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class ChatHub : Hub
     {
         private readonly IPublisher _publisher;
@@ -22,19 +25,22 @@ namespace ChatApp.Infrastructure.Hubs
         }
         public override async Task OnConnectedAsync()
         {
-            var userId = Context.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var userId = Context.UserIdentifier;
             await _publisher.Publish(new SignedInHubEvent(Guid.NewGuid(), userId, Context.ConnectionId));
+            await base.OnConnectedAsync();
         }
-        public override async Task OnDisconnectedAsync(Exception exception)
+        public override async Task OnDisconnectedAsync(Exception? exception)
         {
-            var userId = Context.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var userId = Context.UserIdentifier;
             await _publisher.Publish(new SignedOutHubEvent(Guid.NewGuid(), userId));
+            await base.OnDisconnectedAsync(exception);
         }
 
         public async Task SendMessage(CreateMessageCommand msg)
         {
             var messageId = Guid.NewGuid();
             var createDate = DateTimeOffset.Now;
+
             var userId = Context.User.FindFirstValue(ClaimTypes.NameIdentifier);
             var result = await _sender.Send(new CreateMessageCommand(Guid.Parse(userId),msg.RoomChatId, msg.MessageId, msg.Content, msg.Type, msg.IsGroup, createDate));
             if (result.IsSuccess)

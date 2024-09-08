@@ -2486,6 +2486,7 @@
           "ChatApp.Application": "1.0.0",
           "ChatApp.Persistence": "1.0.0",
           "CloudinaryDotNet": "1.26.2",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.8",
           "Microsoft.AspNetCore.SignalR": "1.1.0",
           "Microsoft.Extensions.Caching.StackExchangeRedis": "8.0.8",
           "Microsoft.Extensions.Configuration": "8.0.0",

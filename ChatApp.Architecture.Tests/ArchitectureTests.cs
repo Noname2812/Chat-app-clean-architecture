@@ -8,6 +8,7 @@ namespace ChatApp.Architecture.Tests
         private const string DomainNamespace = "ChatApp.Domain";
         private const string ApplicationNamespace = "ChatApp.Application";
         private const string InfrastructureNamespace = "ChatApp.Infrastructure";
+        private const string DapperNameSpace = "ChatApp.Infrastructure.Dapper";
         private const string PersistenceNamespace = "ChatApp.Persistence";
         private const string PresentationNamespace = "ChatApp.Presentation";
         private const string ApiNamespace = "ChatApp.API";
@@ -47,7 +48,7 @@ namespace ChatApp.Architecture.Tests
 
             var otherProjects = new[]
             {
-            InfrastructureNamespace,
+            //InfrastructureNamespace,
             //PersistenceNamespace, // Due to Implement sort multi columns by apply RawQuery with EntityFramework
             PresentationNamespace,
             ApiNamespace

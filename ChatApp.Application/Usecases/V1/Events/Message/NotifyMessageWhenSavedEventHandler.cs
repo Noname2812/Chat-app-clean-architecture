@@ -4,7 +4,7 @@ using static ChatApp.Contract.Services.V1.Message.DomainEvent;
 
 namespace ChatApp.Application.Usecases.V1.Events.Message
 {
-    public class NotifyMessageWhenSavedEventHandler : IDomainEventHandler<SavedMessageEvent>
+    public sealed class NotifyMessageWhenSavedEventHandler : IDomainEventHandler<SavedMessageEvent>
     {
         private readonly IHubService _hubService;
         private readonly IRedisService _redisService;

@@ -1,4 +1,4 @@
-using Carter;
+﻿using Carter;
 using ChatApp.API.DependencyInjection.Extensions;
 using ChatApp.API.Middleware;
 using ChatApp.Application.DependencyInjections.Extensions;
@@ -32,6 +32,21 @@ builder.Services
 
 builder.Host.UseSerilog();
 
+// Add Cater module
+builder.Services.AddCarter();
+
+// Add CORS services
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:3000") // Thay thế với nguồn gốc front-end của bạn
+                  .AllowAnyHeader()
+                  .AllowAnyMethod()
+                  .AllowCredentials(); // Cho phép gửi credentials (cookie, auth headers, etc.)
+        });
+});
 // Add configuration
 builder.Services.AddConfigureMediatR();
 builder.Services.AddConfigureAutoMapper();
@@ -41,9 +56,6 @@ builder.Services.AddRepositoryBaseConfiguration();
 builder.Services.AddConfigurationRedis(builder.Configuration);
 builder.Services.AddInfrastructureDapper();
 builder.Services.AddConfigurationSignalR();
-
-// Add Cater module
-builder.Services.AddCarter();
 
 builder.Services
     .AddApiVersioning(options => options.ReportApiVersions = true)
@@ -72,16 +84,16 @@ app.UseMiddleware<ExceptionHandlingMiddleware>();
 if (builder.Environment.IsDevelopment() || builder.Environment.IsStaging())
 {
     app.ConfigureSwagger();
+    app.UseCors("AllowSpecificOrigin");
 }
-
-//app.UseHttpsRedirection();
+app.UseHttpsRedirection();
 
 app.UseAuthentication();
-
 app.UseAuthorization();
 app.UseMiddleware<BlackListTokenMiddleware>();
 app.MapCarter();
 app.MapHub<ChatHub>("/chat");
+
 //app.MapControllers();
 try
 {
