@@ -31,4 +31,8 @@
     <ProjectReference Include="..\Infrastructure.MessageBus\ChatApp.Infrastructure.MessageBus.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="logs\" />
+  </ItemGroup>
+
 </Project>

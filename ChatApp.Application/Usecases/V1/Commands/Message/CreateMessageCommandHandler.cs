@@ -1,7 +1,10 @@
 ﻿using ChatApp.Contract.Abstractions.Message;
 using ChatApp.Contract.Abstractions.Shared;
 using ChatApp.Domain.Abstractions.Repositories;
+using ChatApp.Domain.Enums;
+using Microsoft.AspNetCore.Http;
 using static ChatApp.Contract.Services.V1.Message.Command;
+using static ChatApp.Domain.Exceptions.RoomChatException;
 
 namespace ChatApp.Application.Usecases.V1.Commands.Message
 {
@@ -16,19 +19,20 @@ namespace ChatApp.Application.Usecases.V1.Commands.Message
         }
         public async Task<Result> Handle(CreateMessageCommand request, CancellationToken cancellationToken)
         {
-            var room = await _roomChatRepository.FindByIdAsync(request.RoomChatId);
+            var roomId = request.RoomChatId ?? Guid.NewGuid();
+            var room = await _roomChatRepository.FindByIdAsync(roomId);
             if (room == null)
             {
-                // throw invalid room chat 
+                return Result.Failure(new Error("Not Found", "Not found room with ID " + roomId));
             }
             var message = new Domain.Entities.Message
             {
                 Id = request.MessageId ?? Guid.NewGuid(),
-                RoomChatId = request.RoomChatId,
+                RoomChatId = roomId,
                 Content = request.Content,
                 CreatedBy = request.CreateBy,
                 CreatedDate = request.CreateDate ?? DateTimeOffset.Now,
-                Type = (Domain.Enums.TypeMessage)request.Type,
+                Type = request.Type ?? TypeMessage.String,
             };
             _messageRepository.Add(message);
             return Result.Success();
