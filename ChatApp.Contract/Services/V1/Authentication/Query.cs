@@ -9,6 +9,6 @@ namespace ChatApp.Contract.Services.V1.Identty
     public static class Query
     {
         public record LoginQuery(string Email, string Password) : IQuery<LoginSuccessRespone>;
-        public record RefreshTokenQuery(string? AccessToken, string? RefreshToken) : IQuery<AuthenticatedRespone>;
+        public record RefreshTokenQuery(Guid UserId, string RefreshToken) : IQuery<AuthenticatedRespone>;
     }
 }

@@ -350,7 +350,6 @@ D:\CleanArchitecture\ChatApp\ChatApp.API\obj\Debug\net8.0\ChatApp.API.GeneratedM
 D:\CleanArchitecture\ChatApp\ChatApp.API\obj\Debug\net8.0\ChatApp.API.AssemblyInfoInputs.cache
 D:\CleanArchitecture\ChatApp\ChatApp.API\obj\Debug\net8.0\ChatApp.API.AssemblyInfo.cs
 D:\CleanArchitecture\ChatApp\ChatApp.API\obj\Debug\net8.0\ChatApp.API.csproj.CoreCompileInputs.cache
-D:\CleanArchitecture\ChatApp\ChatApp.API\obj\Debug\net8.0\ChatApp.API.MvcApplicationPartsAssemblyInfo.cs
 D:\CleanArchitecture\ChatApp\ChatApp.API\obj\Debug\net8.0\ChatApp.API.MvcApplicationPartsAssemblyInfo.cache
 D:\CleanArchitecture\ChatApp\ChatApp.API\obj\Debug\net8.0\ChatApp.API.sourcelink.json
 D:\CleanArchitecture\ChatApp\ChatApp.API\obj\Debug\net8.0\staticwebassets.build.json
@@ -385,3 +384,4 @@ D:\CleanArchitecture\ChatApp\ChatApp.API\bin\Debug\net8.0\runtimes\win\lib\net8.
 D:\CleanArchitecture\ChatApp\ChatApp.API\bin\Debug\net8.0\ChatApp.Infrastructure.Dapper.dll
 D:\CleanArchitecture\ChatApp\ChatApp.API\bin\Debug\net8.0\ChatApp.Infrastructure.Dapper.pdb
 D:\CleanArchitecture\ChatApp\ChatApp.API\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
+D:\CleanArchitecture\ChatApp\ChatApp.API\obj\Debug\net8.0\ChatApp.API.MvcApplicationPartsAssemblyInfo.cs

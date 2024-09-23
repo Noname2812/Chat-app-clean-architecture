@@ -1,8 +1,9 @@
-﻿using ChatApp.Contract.Abstractions.Shared;
-using ChatApp.Contract.DTOs;
+﻿using ChatApp.Contract.DTOs;
 using ChatApp.Contract.Services.V1.RoomChat;
+using ChatApp.Domain.Abstractions;
 using ChatApp.Domain.Entities.Identity;
 using ChatApp.Domain.Enums;
+using ChatApp.Persistence;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
@@ -22,12 +23,13 @@ namespace ChatApp.Infrastructure.Hubs
         private readonly IPublisher _publisher;
         private readonly ISender _sender;
         private readonly UserManager<AppUser> _userManager;
-        public ChatHub(IPublisher publisher, ISender sender, UserManager<AppUser> userManager)
+
+        public ChatHub(IPublisher publisher, ISender sender, UserManager<AppUser> userManager )
         {
             _publisher = publisher;
             _sender = sender;
             _userManager = userManager;
-
+           
         }
         public override async Task OnConnectedAsync()
         {
@@ -46,6 +48,7 @@ namespace ChatApp.Infrastructure.Hubs
         {
             try
             {
+
                 var userId = Context.UserIdentifier;
                 var roomId = msg.RoomChatId ?? Guid.NewGuid();
                 if (msg.RoomChatId == null && msg.IsGroup == false && msg.To != null)
@@ -55,7 +58,7 @@ namespace ChatApp.Infrastructure.Hubs
                     var createNewRoom = await _sender.Send(new CreateRoomChatCommand(false, null, null, null, members));
                     if (createNewRoom.IsFailure)
                     {
-                        await Clients.Caller.SendAsync("ErrorWhileSendingMessage", createNewRoom.Error);
+                        await Clients.Caller.SendAsync("ErrorWhileSendingMessage", createNewRoom.Error.Message);
                         return;
                     }
                 }
@@ -79,7 +82,7 @@ namespace ChatApp.Infrastructure.Hubs
                 }
                 else
                 {
-                    await Clients.Caller.SendAsync("ErrorWhileSendingMessage", result.Error);
+                    await Clients.Caller.SendAsync("ErrorWhileSendingMessage", result.Error.Message);
                 }
             }
             catch (Exception ex)

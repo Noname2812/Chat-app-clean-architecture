@@ -38,9 +38,9 @@ namespace ChatApp.Infrastructure.Authentication
             var key = Encoding.UTF8.GetBytes(jwtOptions.SecretKey);
             var tokenValidationParameters = new TokenValidationParameters
             {
-                ValidateAudience = false, // on production is true
-                ValidateIssuer = false, // on production is true
-                ValidateLifetime = true,
+                ValidateAudience = false,
+                ValidateIssuer = false, 
+                ValidateLifetime = false,
                 ValidateIssuerSigningKey = true,
                 ValidIssuer = jwtOptions.Issuer,
                 ValidAudience = jwtOptions.Audience,

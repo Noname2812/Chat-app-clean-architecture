@@ -10,7 +10,7 @@ namespace ChatApp.Domain.Exceptions
                 
             }
         }
-        public class InvalidUser : NotFoundException
+        public class InvalidUser : BadRequestException
         {
             public InvalidUser() : base($"Email or Password invalid")
             {
@@ -21,6 +21,12 @@ namespace ChatApp.Domain.Exceptions
         {
             public UserNotFound(Guid? userId) : base($"The user whose id is {userId} does not exist")
             {
+            }
+        }
+        public class RefreshTokenInvalidOrExpried : BadRequestException {
+            public RefreshTokenInvalidOrExpried(): base("Refresh token invalid or expried time")
+            {
+                
             }
         }
     }

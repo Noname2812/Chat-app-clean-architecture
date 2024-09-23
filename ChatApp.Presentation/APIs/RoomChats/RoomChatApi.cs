@@ -21,19 +21,20 @@ namespace ChatApp.Presentation.APIs.RoomChats
         {
             var group1 = app.NewVersionedApi("Roomchats")
                 .MapGroup(BaseURL).HasApiVersion(1).RequireAuthorization();
-            group1.MapGet(string.Empty, GetAllRoomChatByUserV1);
+            group1.MapGet(string.Empty, GetRoomChatsByUserV1);
             group1.MapPost(string.Empty, CreateRoomChatV1);
-            group1.MapGet("{roomId}", () => "");
-            group1.MapDelete("{roomId}", () => "");
-            group1.MapPut("{roomId}", () => "");
+            group1.MapGet("{RoomId}", GetRoomChatByIdV1);
+            group1.MapDelete("{RoomId}", () => "");
+            group1.MapPut("{RoomId}", () => "");
 
             // example version 2
             //var group2 = app.NewVersionedApi("roomchats")
             //    .MapGroup(BaseURL).HasApiVersion(2);
             //group2.MapPost(string.Empty, () => "");
         }
-        public static async Task<IResult> GetAllRoomChatByUserV1(ISender sender, ClaimsPrincipal user, string? searchTerm = null, string? sortColunm = null, 
-            string? sortOrder = null)
+        public static async Task<IResult> GetRoomChatsByUserV1(ISender sender, ClaimsPrincipal user, 
+            string? searchTerm = null, string? sortColunm = null,string? sortOrder = null,
+            int? offset = 0, int? limit = 10)
         {
             var userId = user.FindFirstValue(ClaimTypes.NameIdentifier);
             var sort = !string.IsNullOrWhiteSpace(sortOrder)
@@ -41,7 +42,7 @@ namespace ChatApp.Presentation.APIs.RoomChats
                 ? SortOrder.Ascending : SortOrder.Descending
                 : SortOrder.Descending; // default descending and descending by createDate
 
-            var result = await sender.Send(new GetRoomChatsByQuery(userId,searchTerm,sortColunm, sort));
+            var result = await sender.Send(new GetRoomChatsByQuery(userId, searchTerm, sortColunm, sort));
             if (result.IsFailure)
             {
                 return HandleFailure(result);
@@ -51,6 +52,15 @@ namespace ChatApp.Presentation.APIs.RoomChats
         public static async Task<IResult> CreateRoomChatV1(ISender sender, [FromBody] CreateRoomChatCommand room)
         {
             var result = await sender.Send(room);
+            if (result.IsFailure)
+            {
+                return HandleFailure(result);
+            }
+            return Results.Ok(result);
+        }
+        public static async Task<IResult> GetRoomChatByIdV1(ISender sender, Guid RoomId)
+        {
+            var result = await sender.Send(new GetRoomChatById(RoomId));
             if (result.IsFailure)
             {
                 return HandleFailure(result);

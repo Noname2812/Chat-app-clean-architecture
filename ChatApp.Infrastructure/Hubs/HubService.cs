@@ -14,9 +14,14 @@ namespace ChatApp.Infrastructure.Hubs
             _roomChatQueryRepository = roomChatQuery;
         }
 
-        public async Task JoinGroupChat(string ConnectionId, string UserId)
+        public async Task AddMemberIntoGroup(string ConnectionId, string GroupId)
         {
-            var rooms = await _roomChatQueryRepository.GetRoomChatsByUserId(Guid.Parse(UserId));
+            await _hubContext.Groups.AddToGroupAsync(ConnectionId, GroupId);
+        }
+
+        public async Task JoinAllGroupChatsWithUserId(string ConnectionId, string UserId)
+        {
+            var rooms = await _roomChatQueryRepository.GetIdRoomChatsByUserId(Guid.Parse(UserId));
             foreach (var room in rooms)
             {
                 if (room.IsGroup)

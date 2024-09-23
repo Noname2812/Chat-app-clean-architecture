@@ -23,7 +23,7 @@ namespace ChatApp.Application.Usecases.V1.Commands.Message
             var room = await _roomChatRepository.FindByIdAsync(roomId);
             if (room == null)
             {
-                return Result.Failure(new Error("Not Found", "Not found room with ID " + roomId));
+                return Result.Failure(new Error("Not Found", "RoomChat Invalid"));
             }
             var message = new Domain.Entities.Message
             {
@@ -33,6 +33,7 @@ namespace ChatApp.Application.Usecases.V1.Commands.Message
                 CreatedBy = request.CreateBy,
                 CreatedDate = request.CreateDate ?? DateTimeOffset.Now,
                 Type = request.Type ?? TypeMessage.String,
+                SeenByJson = ""
             };
             _messageRepository.Add(message);
             return Result.Success();

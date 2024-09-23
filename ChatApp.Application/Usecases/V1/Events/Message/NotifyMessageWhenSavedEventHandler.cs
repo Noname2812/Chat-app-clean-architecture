@@ -1,5 +1,6 @@
 ﻿using ChatApp.Application.Abstractions.Services;
 using ChatApp.Contract.Abstractions.Message;
+using ChatApp.Contract.Constant;
 using static ChatApp.Contract.Services.V1.Message.DomainEvent;
 
 namespace ChatApp.Application.Usecases.V1.Events.Message
@@ -17,12 +18,13 @@ namespace ChatApp.Application.Usecases.V1.Events.Message
         {
             if (notification.IsGroup)
             {
-               await _hubService.NotifyTo(notification.From, notification.To, notification.IsGroup,"ReceivedMessageGroupChat", notification.Message);
+               await _hubService.NotifyTo(notification.From, notification.To, notification.IsGroup,"ReceivedMessage", notification.Message);
             }
             else
             {
-                var toUser = await _redisService.GetDataByKey($"list-users-online:{notification.To}");
-                await _hubService.NotifyTo(notification.From, toUser, notification.IsGroup, "ReceivedMessagePrivate", notification.Message);
+                // get connection Id
+                var toUser = await _redisService.GetDataByKey(KeyRedis.ListUsersOnline + notification.To);
+                await _hubService.NotifyTo(notification.From, toUser, notification.IsGroup, "ReceivedMessage", notification.Message);
             }
         }
     }

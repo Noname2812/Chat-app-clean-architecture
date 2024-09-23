@@ -1,5 +1,6 @@
 ﻿
 using ChatApp.Domain.Exceptions;
+using Microsoft.IdentityModel.Tokens;
 using System.Text.Json;
 
 namespace ChatApp.API.Middleware;
@@ -62,6 +63,7 @@ internal sealed class ExceptionHandlingMiddleware : IMiddleware
         NotFoundException => StatusCodes.Status404NotFound,
         FormatException => StatusCodes.Status422UnprocessableEntity,
         FluentValidation.ValidationException => StatusCodes.Status400BadRequest,
+        SecurityTokenException => StatusCodes.Status400BadRequest,
         _ => StatusCodes.Status500InternalServerError,
     };
 }

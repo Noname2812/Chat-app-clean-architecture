@@ -3,7 +3,9 @@ using ChatApp.Domain.Abstractions.Repositories;
 using ChatApp.Domain.Entities;
 using ChatApp.Domain.Entities.Identity;
 using ChatApp.Domain.Exceptions;
+using MediatR;
 using Microsoft.AspNetCore.Identity;
+using static ChatApp.Contract.Services.V1.ConversationParticipant.DomainEvent;
 using static ChatApp.Contract.Services.V1.RoomChat.DomainEvent;
 
 namespace ChatApp.Application.Usecases.V1.Events.RoomChat
@@ -13,10 +15,13 @@ namespace ChatApp.Application.Usecases.V1.Events.RoomChat
     {
         private readonly IRepositoryBase<ConversationParticipant, Guid> _conversationParticipantRepository;
         private readonly UserManager<AppUser> _userManager;
-        public CreateConversationParticipantWhenRoomChatCreatedEventHandler(IRepositoryBase<ConversationParticipant, Guid> conversationParticipantRepository, UserManager<AppUser> userManager)
+        private readonly IPublisher _publisher;
+        public CreateConversationParticipantWhenRoomChatCreatedEventHandler(IRepositoryBase<ConversationParticipant, Guid> conversationParticipantRepository,
+            UserManager<AppUser> userManager, IPublisher publisher)
         {
             _conversationParticipantRepository = conversationParticipantRepository;
             _userManager = userManager;
+            _publisher = publisher;
         }
         public async Task Handle(RoomChatCreatedEvent notification, CancellationToken cancellationToken)
         {
@@ -35,6 +40,7 @@ namespace ChatApp.Application.Usecases.V1.Events.RoomChat
                     NickName = member.NickName ?? member.Name,
                     CreatedDate = DateTime.UtcNow
                 });
+                await _publisher.Publish(new AddMemberIntoGroupHub(Guid.NewGuid(), member.Id, notification.RoomId));
             }
         }
     }

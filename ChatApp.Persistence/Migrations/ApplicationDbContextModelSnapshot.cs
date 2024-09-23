@@ -36,7 +36,7 @@ namespace ChatApp.Persistence.Migrations
                     b.Property<DateTimeOffset>("CreatedDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetimeoffset")
-                        .HasDefaultValue(new DateTimeOffset(new DateTime(2024, 9, 8, 0, 28, 13, 155, DateTimeKind.Unspecified).AddTicks(402), new TimeSpan(0, 7, 0, 0, 0)));
+                        .HasDefaultValue(new DateTimeOffset(new DateTime(2024, 9, 23, 20, 33, 45, 98, DateTimeKind.Unspecified).AddTicks(3754), new TimeSpan(0, 7, 0, 0, 0)));
 
                     b.Property<DateTimeOffset>("ModifiedDate")
                         .HasColumnType("datetimeoffset");
@@ -212,7 +212,7 @@ namespace ChatApp.Persistence.Migrations
                     b.Property<DateTimeOffset>("LastOnline")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetimeoffset")
-                        .HasDefaultValue(new DateTimeOffset(new DateTime(2024, 9, 8, 0, 28, 13, 151, DateTimeKind.Unspecified).AddTicks(2304), new TimeSpan(0, 7, 0, 0, 0)));
+                        .HasDefaultValue(new DateTimeOffset(new DateTime(2024, 9, 23, 20, 33, 45, 95, DateTimeKind.Unspecified).AddTicks(444), new TimeSpan(0, 7, 0, 0, 0)));
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -364,6 +364,8 @@ namespace ChatApp.Persistence.Migrations
                     b.HasIndex("RoomChatId");
 
                     b.ToTable("Message", (string)null);
+
+                    b.HasAnnotation("SqlServer:UseSqlOutputClause", false);
                 });
 
             modelBuilder.Entity("ChatApp.Domain.Entities.RoomChat", b =>

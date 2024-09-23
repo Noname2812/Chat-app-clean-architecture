@@ -1,6 +1,6 @@
 ﻿using ChatApp.Application.Abstractions.Services;
 using ChatApp.Contract.Abstractions.Message;
-using static ChatApp.Contract.Services.V1.ChatHub.DomainEvent;
+using ChatApp.Contract.Constant;
 using static ChatApp.Contract.Services.V1.Identty.DomainEvent;
 
 namespace ChatApp.Application.Usecases.V1.Events.Authentication
@@ -17,8 +17,8 @@ namespace ChatApp.Application.Usecases.V1.Events.Authentication
         {
             // update cache
             await Task.WhenAll(
-             _redisService.SetData($"black-list-token:{notification.Token}", true, TimeSpan.FromSeconds(600)),
-             _redisService.RemoveDataByKey($"list-refresh-token:{notification.UserId}"));
+             _redisService.SetData(KeyRedis.BlackListToken + notification.Token, true, TimeSpan.FromSeconds(600)),
+             _redisService.RemoveDataByKey(KeyRedis.ListRefreshToken + notification.UserId));
         }
     }
 }

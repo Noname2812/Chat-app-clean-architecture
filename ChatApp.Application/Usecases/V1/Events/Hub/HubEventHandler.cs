@@ -1,5 +1,6 @@
 ﻿using ChatApp.Application.Abstractions.Services;
 using ChatApp.Contract.Abstractions.Message;
+using ChatApp.Contract.Constant;
 using ChatApp.Domain.Entities.Identity;
 using Microsoft.AspNetCore.Identity;
 using static ChatApp.Contract.Services.V1.ChatHub.DomainEvent;
@@ -22,7 +23,7 @@ namespace ChatApp.Application.Usecases.V1.Events.Hub
         }
         public async Task Handle(SignedInHubEvent notification, CancellationToken cancellationToken)
         {
-            await Task.WhenAll(_hubService.JoinGroupChat(notification.ConnectionId, notification.UserId),
+            await Task.WhenAll(_hubService.JoinAllGroupChatsWithUserId(notification.ConnectionId, notification.UserId),
                 _redisService.SetData($"list-users-online:{notification.UserId}", notification.ConnectionId, TimeSpan.FromDays(1)));
         }
         public async Task Handle(SignedOutHubEvent notification, CancellationToken cancellationToken)
@@ -32,7 +33,7 @@ namespace ChatApp.Application.Usecases.V1.Events.Hub
             {
                 user.LastOnline = DateTimeOffset.Now;
                 user.IsOnline = false;
-                await Task.WhenAll(_userManager.UpdateAsync(user), _redisService.RemoveDataByKey($"list-users-online:{notification.UserId}"));
+                await Task.WhenAll(_userManager.UpdateAsync(user), _redisService.RemoveDataByKey(KeyRedis.ListUsersOnline + notification.UserId));
             }
         }
     }

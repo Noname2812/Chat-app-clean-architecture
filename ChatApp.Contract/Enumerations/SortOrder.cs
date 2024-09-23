@@ -17,7 +17,6 @@ namespace ChatApp.Contract.Enumerations
 
         public static implicit operator SortOrder(int value)
             => FromValue(value);
-
         public static implicit operator string(SortOrder status)
             => status.Name;
 

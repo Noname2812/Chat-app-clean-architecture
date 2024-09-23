@@ -41,7 +41,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowSpecificOrigin",
         policy =>
         {
-            policy.WithOrigins("http://localhost:3000") // Thay thế với nguồn gốc front-end của bạn
+            policy.WithOrigins("http://localhost:5173") // Thay thế với nguồn gốc front-end của bạn
                   .AllowAnyHeader()
                   .AllowAnyMethod()
                   .AllowCredentials(); // Cho phép gửi credentials (cookie, auth headers, etc.)

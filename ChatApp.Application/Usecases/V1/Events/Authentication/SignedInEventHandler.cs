@@ -1,8 +1,6 @@
-﻿
-
-using ChatApp.Application.Abstractions.Services;
+﻿using ChatApp.Application.Abstractions.Services;
 using ChatApp.Contract.Abstractions.Message;
-using static ChatApp.Contract.Services.V1.ChatHub.DomainEvent;
+using ChatApp.Contract.Constant;
 using static ChatApp.Contract.Services.V1.Identty.DomainEvent;
 
 namespace ChatApp.Application.Usecases.V1.Events.Authentication
@@ -19,7 +17,7 @@ namespace ChatApp.Application.Usecases.V1.Events.Authentication
         public async Task Handle(SignedInEvent notification, CancellationToken cancellationToken)
         {
             // update cache
-            await _redisService.SetData($"list-refresh-token:{notification.User.Id}", notification.RefreshToken, TimeSpan.FromDays(1));
+            await _redisService.SetData(KeyRedis.ListRefreshToken + notification.User.Id, notification.RefreshToken, TimeSpan.FromDays(1));
         }
 
        

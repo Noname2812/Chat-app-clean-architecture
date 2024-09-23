@@ -2,8 +2,6 @@
 
 using ChatApp.Domain.Abstractions;
 using ChatApp.Domain.Enums;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Text.Json;
 
 namespace ChatApp.Domain.Entities
 {

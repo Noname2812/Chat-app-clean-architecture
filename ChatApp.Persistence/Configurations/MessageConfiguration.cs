@@ -13,6 +13,7 @@ namespace ChatApp.Persistence.Configurations
         public void Configure(EntityTypeBuilder<Message> builder)
         {
             builder.ToTable(TableNames.Message);
+            builder.ToTable(tb => tb.UseSqlOutputClause(false));
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Type).HasDefaultValue(TypeMessage.String).HasConversion<int>();
             builder.Property(x => x.Status).HasDefaultValue(StatusMessage.Sent).HasConversion<int>();
