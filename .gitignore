@@ -36,9 +36,8 @@ dlldata.c
 project.lock.json
 project.fragment.lock.json
 artifacts/
-# Ignore the obj folder
-*./obj/
-# Ignore the bin folder
-*./bin/
+# Ignore bin and obj directories
+**/bin/
+**/obj/
 # Ignore appsettings.json
-*./appsettings.json
+**/appsettings.json
