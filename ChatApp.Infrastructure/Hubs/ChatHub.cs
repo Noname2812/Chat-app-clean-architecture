@@ -77,7 +77,7 @@ namespace ChatApp.Infrastructure.Hubs
                         CreatedBy = Guid.Parse(userId),
                         CreatedDate = createDate,
                     };
-                    await Task.WhenAll(_publisher.Publish(new SavedMessageEvent(Guid.NewGuid(), Context.ConnectionId, roomId.ToString(), msg.IsGroup, message)),
+                    await Task.WhenAll(_publisher.Publish(new SavedMessageEvent(Guid.NewGuid(), userId, roomId.ToString(), msg.IsGroup, message)),
                         Clients.Caller.SendAsync("SendMessageSuccessfully", message));
                 }
                 else

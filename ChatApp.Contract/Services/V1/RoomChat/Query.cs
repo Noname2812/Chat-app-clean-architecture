@@ -10,6 +10,6 @@ namespace ChatApp.Contract.Services.V1.RoomChat
     {
         public record GetRoomChatsByQuery(string? UserId, string? SearchTerm, string? SortColunm, SortOrder? SortOrder) 
             : IQuery<List<RoomChatRespone>>;
-        public record GetRoomChatById(Guid Id) : IQuery<RoomChatRespone>;
+        public record GetRoomChatById(Guid Id, int? Offset = 0, int? Limit = 10) : IQuery<RoomChatRespone>;
     }
 }

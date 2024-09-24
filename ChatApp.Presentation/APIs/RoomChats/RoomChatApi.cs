@@ -58,9 +58,9 @@ namespace ChatApp.Presentation.APIs.RoomChats
             }
             return Results.Ok(result);
         }
-        public static async Task<IResult> GetRoomChatByIdV1(ISender sender, Guid RoomId)
+        public static async Task<IResult> GetRoomChatByIdV1(ISender sender, Guid RoomId, int? offset = 0, int? limit = 10)
         {
-            var result = await sender.Send(new GetRoomChatById(RoomId));
+            var result = await sender.Send(new GetRoomChatById(RoomId,offset,limit));
             if (result.IsFailure)
             {
                 return HandleFailure(result);

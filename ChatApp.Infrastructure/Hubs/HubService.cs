@@ -31,7 +31,7 @@ namespace ChatApp.Infrastructure.Hubs
             }
         }
 
-        public async Task NotifyTo(string From, string To, bool IsGroup, string Method, object value)
+        public async Task NotifyTo( string To, bool IsGroup, string Method, object value)
         {
             if (IsGroup == true)
             {
