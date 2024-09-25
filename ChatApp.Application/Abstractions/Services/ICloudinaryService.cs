@@ -9,5 +9,6 @@ namespace ChatApp.Application.Abstractions.Services
     {
         Task<ImageUploadResult> UploadImage(IFormFile file);
         Task<DeletionResult> DeleteImage(string id);
+        Task<VideoUploadResult> UploadAudio(IFormFile file);
     }
 }

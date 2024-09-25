@@ -8,6 +8,7 @@ using ChatApp.Infrastructure.Hubs;
 using ChatApp.Persistence.DependencyInjection.Extensions;
 using ChatApp.Persistence.DependencyInjection.Options;
 using MicroElements.Swashbuckle.FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Http.Features;
 using Serilog;
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,7 +20,6 @@ Log.Logger = new LoggerConfiguration().ReadFrom
 builder.Logging
     .ClearProviders()
     .AddSerilog();
-
 builder.Services.AddInfrastructureServices();
 
 builder.Services
@@ -32,9 +32,13 @@ builder.Services
 
 builder.Host.UseSerilog();
 
+
 // Add Cater module
 builder.Services.AddCarter();
-
+builder.Services.Configure<FormOptions>(options =>
+{
+    options.MultipartBodyLengthLimit = 52428800; // Set file size limit (e.g., 50 MB)
+});
 // Add CORS services
 builder.Services.AddCors(options =>
 {

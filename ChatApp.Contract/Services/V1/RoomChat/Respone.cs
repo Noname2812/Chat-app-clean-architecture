@@ -23,6 +23,8 @@ namespace ChatApp.Contract.Services.V1.RoomChat
             public Guid Id { get; set; }
             public string? Avatar { get; set; }
             public string? Name { get; set; }
+            public bool? IsOnline { get; set; }
+            public DateTimeOffset? LastOnline { get; set; }
         }
     }
 }

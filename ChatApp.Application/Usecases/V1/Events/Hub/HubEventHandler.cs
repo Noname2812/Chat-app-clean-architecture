@@ -23,6 +23,9 @@ namespace ChatApp.Application.Usecases.V1.Events.Hub
         }
         public async Task Handle(SignedInHubEvent notification, CancellationToken cancellationToken)
         {
+            var user = await _userManager.FindByIdAsync(notification.UserId);
+            user.IsOnline = true;
+            await _userManager.UpdateAsync(user);
             await Task.WhenAll(_hubService.JoinAllGroupChatsWithUserId(notification.ConnectionId, notification.UserId),
                 _redisService.SetData($"list-users-online:{notification.UserId}", notification.ConnectionId, TimeSpan.FromDays(1)));
         }
@@ -33,6 +36,7 @@ namespace ChatApp.Application.Usecases.V1.Events.Hub
             {
                 user.LastOnline = DateTimeOffset.Now;
                 user.IsOnline = false;
+                await _userManager.UpdateAsync(user);
                 await Task.WhenAll(_userManager.UpdateAsync(user), _redisService.RemoveDataByKey(KeyRedis.ListUsersOnline + notification.UserId));
             }
         }

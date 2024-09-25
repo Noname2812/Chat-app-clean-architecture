@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ajPo1BGF8s1ixTYn8zYBjIZud/LxQMOmkn8SzLO/owtBcD9tOsmfhnXjFeD4MrKDP+PVrf83+yEu8BL+65bzaA==",
+  "dgSpecHash": "qGSZ7EQ1sBKfDGIevSunfZefwMa6WclnfKoKQV3GsW0deb1ZmvUwwb8rlCDXBkKM6k4VM4ohhOghPVtS2lS1VA==",
   "success": true,
   "projectFilePath": "D:\\CleanArchitecture\\ChatApp\\ChatApp.RoomChat.Tests\\ChatApp.RoomChat.Tests.csproj",
   "expectedPackageFiles": [

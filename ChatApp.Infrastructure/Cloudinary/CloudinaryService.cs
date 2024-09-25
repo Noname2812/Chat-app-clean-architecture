@@ -36,10 +36,35 @@ namespace ChatApp.Infrastructure.Cloudinary
                 {
                     File = new FileDescription(file.FileName, stream),
                     Transformation = new Transformation(),
+                    
                 };
                 uploadResult = await _cloudinary.UploadAsync(uploadParams);
             }
             return uploadResult;
+        }
+        public async Task<VideoUploadResult> UploadAudio(IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+            {
+                throw new ArgumentException("Invalid file", nameof(file));
+            }
+
+            using (var stream = file.OpenReadStream())
+            {
+                var uploadParams = new VideoUploadParams
+                {
+                    File = new FileDescription(file.FileName, stream),
+                };
+
+                var uploadResult = await _cloudinary.UploadAsync(uploadParams);
+
+                if (uploadResult.Error != null)
+                {
+                    throw new Exception($"Failed to upload file: {uploadResult.Error.Message}");
+                }
+
+                return uploadResult;
+            }
         }
     }
 }

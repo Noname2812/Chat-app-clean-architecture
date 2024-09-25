@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fmNRnjw4lgduIvGJm+g8aeGlu4J4N2K934oMAZJkzWgwzkU1mVGYuiGIStsxnFkWH1UBLca0QR35XsSL1v9bGw==",
+  "dgSpecHash": "nqIxqWEcU3hXt1x4dXdhzQkZwZ7el9ze/soAmP2YMBu/m2OD0g4llvNm0lO/+5Y9GwfmldUQn520iZy04K9Emg==",
   "success": true,
   "projectFilePath": "D:\\CleanArchitecture\\ChatApp\\ChatApp.Architecture.Tests\\ChatApp.Architecture.Tests.csproj",
   "expectedPackageFiles": [

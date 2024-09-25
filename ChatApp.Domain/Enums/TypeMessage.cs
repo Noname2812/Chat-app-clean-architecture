@@ -6,6 +6,6 @@ namespace ChatApp.Domain.Enums
     {
         String = 0,
         Image = 1,
-        File = 2,
+        Audio = 2,
     }
 }
