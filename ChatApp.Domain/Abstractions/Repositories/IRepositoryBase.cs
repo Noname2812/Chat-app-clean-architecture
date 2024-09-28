@@ -11,6 +11,7 @@ namespace ChatApp.Domain.Abstractions.Repositories
         Task<TEntity?> FindSingleAsync(Expression<Func<TEntity, bool>>? predicate = null, CancellationToken cancellationToken = default, params Expression<Func<TEntity, object>>[] includeProperties);
 
         IQueryable<TEntity> FindAll(Expression<Func<TEntity, bool>>? predicate = null, params Expression<Func<TEntity, object>>[] includeProperties);
+        Task<int> GetTotalCount();
 
         void Add(TEntity entity);
 

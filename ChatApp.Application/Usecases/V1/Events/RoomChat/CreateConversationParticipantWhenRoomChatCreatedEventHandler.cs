@@ -27,20 +27,24 @@ namespace ChatApp.Application.Usecases.V1.Events.RoomChat
         {
             foreach (var member in notification.Members)
             {
-                var isUserExists = await _userManager.FindByIdAsync(member.Id.ToString());
-                if (isUserExists == null)
+
+                var userExists = await _userManager.FindByIdAsync(member.ToString());
+                if (userExists == null)
                 {
                     // throw Error User ID invalid
-                    throw new IdentityException.UserNotFound(member.Id);
+                    throw new IdentityException.UserNotFound(member);
                 }
                 _conversationParticipantRepository.Add(new ConversationParticipant
                 {
-                    UserId = member.Id,
+                    UserId = member,
                     RoomChatId = notification.RoomId,
-                    NickName = member.NickName ?? member.Name,
+                    NickName = userExists.Name,
                     CreatedDate = DateTime.UtcNow
                 });
-                await _publisher.Publish(new AddMemberIntoGroupHub(Guid.NewGuid(), member.Id, notification.RoomId));
+                if (notification.IsGroup)
+                {
+                    await _publisher.Publish(new AddMemberIntoGroupHub(Guid.NewGuid(), member, notification.RoomId));
+                }
             }
         }
     }

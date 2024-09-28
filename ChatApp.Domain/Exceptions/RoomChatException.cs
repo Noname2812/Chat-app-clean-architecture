@@ -4,9 +4,9 @@ namespace ChatApp.Domain.Exceptions
 {
     public static class RoomChatException
     {
-        public class RoomChatNotFoundException : NotFoundException
+        public class RoomChatUnprocessableEntityException :UnprocessableEntityException
         {
-            public RoomChatNotFoundException(Guid roomChatId) : base($"The room chat with the id {roomChatId} was not found !")
+            public RoomChatUnprocessableEntityException() : base($"Room id invalid !")
             {
             }
         }

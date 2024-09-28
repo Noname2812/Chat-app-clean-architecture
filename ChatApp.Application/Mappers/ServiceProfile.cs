@@ -1,6 +1,7 @@
 ﻿
 
 using AutoMapper;
+using ChatApp.Contract.Abstractions.Shared;
 using ChatApp.Contract.DTOs;
 using ChatApp.Domain.Entities;
 using ChatApp.Domain.Entities.Identity;
@@ -15,9 +16,11 @@ namespace ChatApp.Application.Mappers
             //V1
             CreateMap<ConversationParticipant, ConversationParticipantRespone>().ReverseMap();
             CreateMap<RoomChat, RoomChatRespone>().ReverseMap();
+            CreateMap<PageResult<RoomChat>, PageResult<RoomChatRespone>>().ReverseMap();
             CreateMap<AppUser, UserDTO>().ReverseMap();
             CreateMap<AppUser, InfoMember>().ReverseMap();
             CreateMap<Message, MessageDTO>();
+            CreateMap<PageResult<Message>, PageResult<MessageDTO>>();
             //V2
         }
     }

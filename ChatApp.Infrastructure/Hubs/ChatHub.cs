@@ -51,11 +51,11 @@ namespace ChatApp.Infrastructure.Hubs
 
                 var userId = Context.UserIdentifier;
                 var roomId = msg.RoomChatId ?? Guid.NewGuid();
-                if (msg.RoomChatId == null && msg.IsGroup == false && msg.To != null)
+                if (msg.RoomChatId == null && msg.IsGroup == false && msg.ToUser != null)
                 {
                     var from = await _userManager.FindByIdAsync(userId);
-                    var members = new List<Member>() { new Member(Guid.Parse(userId), from.Name, null), msg.To };
-                    var createNewRoom = await _sender.Send(new CreateRoomChatCommand(false, null, null, null, members));
+                    var members = new List<Member>() { new Member(Guid.Parse(userId),null), new Member(Guid.Parse(msg.ToUser), null) };
+                    var createNewRoom = await _sender.Send(new CreateRoomChatCommand(roomId,false, null, null, null, members));
                     if (createNewRoom.IsFailure)
                     {
                         await Clients.Caller.SendAsync("ErrorWhileSendingMessage", createNewRoom.Error.Message);
@@ -65,10 +65,10 @@ namespace ChatApp.Infrastructure.Hubs
                 var messageId = Guid.NewGuid();
                 var createDate = DateTimeOffset.Now;
                 var result = await _sender.Send(new CreateMessageCommand(
-                    Guid.Parse(userId), roomId, null, msg.MessageId, msg.Content, msg.Type, msg.IsGroup, createDate));
+                    Guid.Parse(userId), roomId, msg.ToUser, msg.MessageId, msg.Content, msg.Type, msg.IsGroup, createDate));
                 if (result.IsSuccess)
                 {
-                    var message = new MessageDTO
+                    var message = new Domain.Entities.Message
                     {
                         Id = messageId,
                         Content = msg.Content,

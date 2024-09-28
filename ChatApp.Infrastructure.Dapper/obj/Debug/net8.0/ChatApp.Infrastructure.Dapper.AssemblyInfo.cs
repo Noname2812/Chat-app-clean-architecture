@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ChatApp.Infrastructure.Dapper")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d88db5caa517fc3fa01615f0c01ef791c2dfe3a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+07f456a3c050fb41184e6eb997d6a692ff447a01")]
 [assembly: System.Reflection.AssemblyProductAttribute("ChatApp.Infrastructure.Dapper")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ChatApp.Infrastructure.Dapper")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

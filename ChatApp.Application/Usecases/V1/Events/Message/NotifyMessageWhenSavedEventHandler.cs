@@ -22,17 +22,18 @@ namespace ChatApp.Application.Usecases.V1.Events.Message
         {
             if (notification.IsGroup)
             {
-               await _hubService.NotifyTo( notification.To, notification.IsGroup,"ReceivedMessage", notification.Message);
+                await _hubService.NotifyTo(notification.To, notification.IsGroup, "ReceivedMessage", notification.Message);
             }
             else
             {
-                var user = await _repository.FindSingleAsync(x => x.RoomChatId == Guid.Parse(notification.To) 
+                var user = await _repository.FindSingleAsync(x => x.RoomChatId == Guid.Parse(notification.To)
                 && x.UserId != Guid.Parse(notification.From));
                 // get connection Id
                 var toUser = await _redisService.GetDataByKey(KeyRedis.ListUsersOnline + user.UserId);
-                if(toUser != null) { 
+                if (toUser != null)
+                {
 
-                await _hubService.NotifyTo( toUser, notification.IsGroup, "ReceivedMessage", notification.Message);
+                    await _hubService.NotifyTo(toUser, notification.IsGroup, "ReceivedMessage", notification.Message);
                 }
             }
         }

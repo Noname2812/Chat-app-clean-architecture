@@ -34,7 +34,7 @@ namespace ChatApp.Presentation.APIs.RoomChats
         }
         public static async Task<IResult> GetRoomChatsByUserV1(ISender sender, ClaimsPrincipal user, 
             string? searchTerm = null, string? sortColunm = null,string? sortOrder = null,
-            int? offset = 0, int? limit = 10)
+            int pageIndex = 0, int pageSize = 10)
         {
             var userId = user.FindFirstValue(ClaimTypes.NameIdentifier);
             var sort = !string.IsNullOrWhiteSpace(sortOrder)
@@ -42,7 +42,7 @@ namespace ChatApp.Presentation.APIs.RoomChats
                 ? SortOrder.Ascending : SortOrder.Descending
                 : SortOrder.Descending; // default descending and descending by createDate
 
-            var result = await sender.Send(new GetRoomChatsByQuery(userId, searchTerm, sortColunm, sort));
+            var result = await sender.Send(new GetRoomChatsByQuery(userId, searchTerm, sortColunm, sort, pageIndex, pageSize));
             if (result.IsFailure)
             {
                 return HandleFailure(result);

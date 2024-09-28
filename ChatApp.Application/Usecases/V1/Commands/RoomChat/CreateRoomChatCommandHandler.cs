@@ -31,7 +31,7 @@ namespace ChatApp.Application.Usecases.V1.Commands.RoomChat
             }
             var room = new Domain.Entities.RoomChat
             {
-                Id = Guid.NewGuid(),
+                Id = request.Id ?? Guid.NewGuid(),
                 Avatar = request.Avatar,
                 IsGroup = request.IsGroup ?? false,
                 CreatedDate = DateTime.UtcNow,
@@ -43,11 +43,11 @@ namespace ChatApp.Application.Usecases.V1.Commands.RoomChat
                     // throw error group chat must have at least 3 members.
                     throw new RoomChatException.GroupChatMustHaveAtLeastThreeMembers();
                 }
-                room.Name = request.Name ?? $"Group chat by {uniqueMembers.First().Name} host";
+                room.Name = request.Name ?? $"New group chat";
             }
             _repository.Add(room);
             // add members into conversation
-            await _publisher.Publish(new RoomChatCreatedEvent(Guid.NewGuid(), room.Id, uniqueMembers), cancellationToken);
+            await _publisher.Publish(new RoomChatCreatedEvent(Guid.NewGuid(), room.Id, uniqueMembers.Select(x => x.Id).ToList(),room.IsGroup), cancellationToken);
             return Result.Success();
         }
     }

@@ -54,6 +54,7 @@ namespace ChatApp.Infrastructure.Cloudinary
                 var uploadParams = new VideoUploadParams
                 {
                     File = new FileDescription(file.FileName, stream),
+                    
                 };
 
                 var uploadResult = await _cloudinary.UploadAsync(uploadParams);

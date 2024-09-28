@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+
+using ChatApp.Contract.Abstractions.Message;
+using ChatApp.Contract.Abstractions.Shared;
+using ChatApp.Contract.DTOs;
 
 namespace ChatApp.Contract.Services.V1.Message
 {
-    internal class Query
+    public static class Query
     {
+        public record GetMessagesByRoomIdQuery(Guid RoomId, int PageSize, int PageIndex) : IQuery<PageResult<MessageDTO>>;
     }
 }

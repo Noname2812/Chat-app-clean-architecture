@@ -62,6 +62,7 @@ internal sealed class ExceptionHandlingMiddleware : IMiddleware
         BadRequestException => StatusCodes.Status400BadRequest,
         NotFoundException => StatusCodes.Status404NotFound,
         FormatException => StatusCodes.Status422UnprocessableEntity,
+        UnprocessableEntityException => StatusCodes.Status422UnprocessableEntity,
         FluentValidation.ValidationException => StatusCodes.Status400BadRequest,
         SecurityTokenException => StatusCodes.Status400BadRequest,
         _ => StatusCodes.Status500InternalServerError,
