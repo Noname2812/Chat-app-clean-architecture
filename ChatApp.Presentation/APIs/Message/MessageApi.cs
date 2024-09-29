@@ -36,9 +36,9 @@ namespace ChatApp.Presentation.APIs.Message
             }
             return Results.Ok(result);
         }
-        public static async Task<IResult> GetMessagesByRoomIdV1(ISender sender,Guid RoomId, int PageIndex=1, int PageSize=10)
+        public static async Task<IResult> GetMessagesByRoomIdV1(ISender sender,Guid RoomId, int PageIndex=1, int PageSize=10, string? keySearch = null)
         {
-            var query = new GetMessagesByRoomIdQuery(RoomId,PageSize,PageIndex);
+            var query = new GetMessagesByRoomIdQuery(RoomId,keySearch,PageSize,PageIndex);
             var result = await sender.Send(query);
             if (result.IsFailure)
             {

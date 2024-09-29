@@ -5,7 +5,9 @@ using ChatApp.Contract.Abstractions.Shared;
 using ChatApp.Contract.DTOs;
 using ChatApp.Domain.Abstractions.Repositories;
 using ChatApp.Domain.Entities;
+using ChatApp.Domain.Enums;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 using static ChatApp.Contract.Services.V1.Message.Query;
 using static ChatApp.Contract.Services.V1.RoomChat.Respone;
 
@@ -24,18 +26,26 @@ namespace ChatApp.Application.Usecases.V1.Queries.Message
                 ? PageResult<Domain.Entities.Message>.DefaultPageSie
                 : request.PageSize > PageResult<Domain.Entities.Message>.UpperPageSize
                 ? PageResult<Domain.Entities.Message>.UpperPageSize : request.PageSize;
+            var query = GetQuery(request);
             var messages = await _repository.FindAll(
-                m => m.RoomChatId == request.RoomId,
+                query,
                 [])
                 .OrderByDescending(r => r.ModifiedDate)
                 .Skip((PageIndex - 1) * PageSize)
                 .Take(PageSize)
                 .ToListAsync();
             var msgs = await _repository.FindAll(x => x.RoomChatId == request.RoomId, [x => x.RoomChat]).Take(10).Skip((PageIndex - 1) * PageSize).ToListAsync();
-            var totalCount = await _repository.GetTotalCount();
+            var totalCount = await _repository.GetTotalCount(query);
             var messagePageResult = PageResult<Domain.Entities.Message>.Create(messages ?? [], PageIndex, PageSize, totalCount);
             var result = _mapper.Map<PageResult<MessageDTO>>(messagePageResult);
             return result;
         }
+        private static Expression<Func<Domain.Entities.Message, bool>> GetQuery(GetMessagesByRoomIdQuery request)
+        {
+            if(string.IsNullOrEmpty(request.KeySearch))
+                return msg => msg.RoomChatId == request.RoomId;
+            return msg => msg.RoomChatId == request.RoomId && msg.Type == TypeMessage.String && msg.Content.Contains(request.KeySearch);
+        }
+         
     }
 }

@@ -49,9 +49,12 @@ namespace ChatApp.Persistence.Repositories
         public void Update(TEntity entity)
             => _context.Set<TEntity>().Update(entity);
 
-        public async Task<int> GetTotalCount()
+        public async Task<int> GetTotalCount(Expression<Func<TEntity, bool>>? predicate = null)
         {
-            return await _context.Set<TEntity>().CountAsync();
+            IQueryable<TEntity> items = _context.Set<TEntity>().AsNoTracking();
+            if(predicate != null)
+                items = items.Where(predicate);
+            return await items.CountAsync();
         }
     }
 }

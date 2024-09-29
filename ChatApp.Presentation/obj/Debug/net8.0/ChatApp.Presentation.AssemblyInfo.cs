@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ChatApp.Presentation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+07f456a3c050fb41184e6eb997d6a692ff447a01")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41f5876d55eb852fae943ad26bc5f9e93a078639")]
 [assembly: System.Reflection.AssemblyProductAttribute("ChatApp.Presentation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ChatApp.Presentation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

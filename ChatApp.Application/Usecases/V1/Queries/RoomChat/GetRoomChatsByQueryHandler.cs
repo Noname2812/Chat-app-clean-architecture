@@ -6,6 +6,7 @@ using ChatApp.Contract.Abstractions.Message;
 using ChatApp.Contract.Abstractions.Shared;
 using ChatApp.Domain.Abstractions.Repositories;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 using static ChatApp.Contract.Services.V1.RoomChat.Query;
 using static ChatApp.Contract.Services.V1.RoomChat.Respone;
 
@@ -23,18 +24,23 @@ namespace ChatApp.Application.Usecases.V1.Queries.RoomChat
             var PageSize = request.PageSize <= 0
                 ? PageResult<Domain.Entities.RoomChat>.DefaultPageSie
                 : request.PageSize > PageResult<Domain.Entities.RoomChat>.UpperPageSize
-                ? PageResult < Domain.Entities.RoomChat >.UpperPageSize : request.PageSize;
+                ? PageResult<Domain.Entities.RoomChat>.UpperPageSize : request.PageSize;
+            var query = GetQuery(request);
             var roomChats = await _repository.FindAll(
-                p => p.ConversationParticipants.Any(x => x.UserId.ToString() == request.UserId)
+                query
                 , [p => p.ConversationParticipants, p => p.Messages.OrderByDescending(m => m.CreatedDate).Take(1)])
                 .OrderByDescending(r => r.ModifiedDate).Take(10)
                 .Skip((PageIndex - 1) * PageSize)
                 .Take(PageSize)
                 .ToListAsync();
-            var totalCount = await _repository.GetTotalCount();
-            var roomChatPageResult =  PageResult<Domain.Entities.RoomChat>.Create(roomChats ?? [], PageIndex, PageSize, totalCount);
+            var totalCount = await _repository.GetTotalCount(query);
+            var roomChatPageResult = PageResult<Domain.Entities.RoomChat>.Create(roomChats ?? [], PageIndex, PageSize, totalCount);
             var result = _mapper.Map<PageResult<RoomChatRespone>>(roomChatPageResult);
             return result;
+        }
+        private static Expression<Func<Domain.Entities.RoomChat, bool>> GetQuery(GetRoomChatsByQuery request)
+        {
+            return p => p.ConversationParticipants.Any(x => x.UserId.ToString() == request.UserId);
         }
     }
 }
