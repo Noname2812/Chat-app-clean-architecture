@@ -1,5 +1,6 @@
 ﻿
 using Carter;
+using ChatApp.Contract.Abstractions.Shared;
 using ChatApp.Presentation.Abstractions;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
@@ -23,6 +24,7 @@ namespace ChatApp.Presentation.APIs.User
             group1.MapPost("/vertify/{userId}", VertifyAccountV1);
             group1.MapPut("/change-info", UpdateInfoUserV1);
             group1.MapGet("{userId}", GetInfoUserV1).AllowAnonymous();
+            group1.MapGet(string.Empty, GetListUsersByQueryV1).AllowAnonymous();
         }
         public static async Task<IResult> GetCodeVertifyAccountV1(ISender sender,  Guid userId)
         {
@@ -53,5 +55,16 @@ namespace ChatApp.Presentation.APIs.User
             }
             return Results.Ok(result);
         }
+        public static async Task<IResult> GetListUsersByQueryV1(ISender sender, string? KeySearch, int? PageIndex, int? PageSize)
+        {
+            var result = await sender.Send(new SearchListUsersQuery(KeySearch,PageIndex ?? 1,PageSize ?? 10));
+            if (result.IsFailure)
+            {
+                return HandleFailure(result);
+            }
+            return Results.Ok(result);
+
+        }
+
     }
 }

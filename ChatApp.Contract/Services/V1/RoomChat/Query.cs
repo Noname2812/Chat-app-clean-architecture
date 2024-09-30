@@ -9,7 +9,7 @@ namespace ChatApp.Contract.Services.V1.RoomChat
 {
     public static class Query
     {
-        public record GetRoomChatsByQuery(string? UserId, string? SearchTerm, string? SortColunm, SortOrder? SortOrder, int PageIndex, int PageSize) 
+        public record GetRoomChatsByQuery(string? UserId, string? KeySearch, SortOrder? SortOrder, int PageIndex, int PageSize) 
             : IQuery<PageResult<RoomChatRespone>>;
         public record GetRoomChatById(Guid Id, int? Offset = 0, int? Limit = 10) : IQuery<RoomChatRespone>;
     }

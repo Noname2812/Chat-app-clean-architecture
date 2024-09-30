@@ -40,7 +40,14 @@ namespace ChatApp.Application.Usecases.V1.Queries.RoomChat
         }
         private static Expression<Func<Domain.Entities.RoomChat, bool>> GetQuery(GetRoomChatsByQuery request)
         {
-            return p => p.ConversationParticipants.Any(x => x.UserId.ToString() == request.UserId);
+
+            if (string.IsNullOrEmpty(request.KeySearch))
+            {
+                return p => p.ConversationParticipants.Any(x => x.UserId.ToString() == request.UserId);
+            }
+            return p => p.ConversationParticipants.Any(x => x.UserId.ToString() == request.UserId) &&
+            (p.Name != null && p.Name.Contains(request.KeySearch) 
+            || (p.IsGroup == false && p.ConversationParticipants.Any(x => x.NickName.Contains(request.KeySearch) && x.UserId.ToString() != request.UserId)));
         }
     }
 }

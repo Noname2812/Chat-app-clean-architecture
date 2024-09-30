@@ -33,7 +33,7 @@ namespace ChatApp.Presentation.APIs.RoomChats
             //group2.MapPost(string.Empty, () => "");
         }
         public static async Task<IResult> GetRoomChatsByUserV1(ISender sender, ClaimsPrincipal user, 
-            string? searchTerm = null, string? sortColunm = null,string? sortOrder = null,
+            string? keySearch = null, string? sortColunm = null,string? sortOrder = null,
             int pageIndex = 0, int pageSize = 10)
         {
             var userId = user.FindFirstValue(ClaimTypes.NameIdentifier);
@@ -42,7 +42,7 @@ namespace ChatApp.Presentation.APIs.RoomChats
                 ? SortOrder.Ascending : SortOrder.Descending
                 : SortOrder.Descending; // default descending and descending by createDate
 
-            var result = await sender.Send(new GetRoomChatsByQuery(userId, searchTerm, sortColunm, sort, pageIndex, pageSize));
+            var result = await sender.Send(new GetRoomChatsByQuery(userId, keySearch, sort, pageIndex, pageSize));
             if (result.IsFailure)
             {
                 return HandleFailure(result);

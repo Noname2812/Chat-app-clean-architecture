@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 namespace ChatApp.Persistence.Repositories
 {
     public class RepositoryBase<TEntity, TKey> : IRepositoryBase<TEntity, TKey>, IDisposable
-        where TEntity : EntityBase<TKey>
+        where TEntity : EntityBase<TKey> 
     {
 
         private readonly ApplicationDbContext _context;
