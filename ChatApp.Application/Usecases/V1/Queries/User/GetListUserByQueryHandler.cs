@@ -11,7 +11,7 @@ using static ChatApp.Contract.Services.V1.User.Query;
 
 namespace ChatApp.Application.Usecases.V1.Queries.User
 {
-    public class GetListUserByQueryHandler : IQueryHandler<SearchListUsersQuery, PageResult<UserDTO>>
+    public sealed class GetListUserByQueryHandler : IQueryHandler<SearchListUsersQuery, PageResult<UserDTO>>
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly IMapper _mapper;
@@ -22,7 +22,7 @@ namespace ChatApp.Application.Usecases.V1.Queries.User
         }
         public async Task<Result<PageResult<UserDTO>>> Handle(SearchListUsersQuery request, CancellationToken cancellationToken)
         {
-            var users = await _userManager.Users.Where(x =>  x.Email == request.KeySearch 
+            var users = await _userManager.Users.Where(x =>  x.Email == request.KeySearch
             || (x.Name != null && x.Name.Contains(request.KeySearch))).ToListAsync();
             var usersResult = users.Skip((request.PageIndex - 1) * request.PageSize).Take(request.PageSize);
             var items = _mapper.Map<List<UserDTO>>(usersResult) ?? [];

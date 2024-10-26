@@ -32,7 +32,6 @@ builder.Services
 
 builder.Host.UseSerilog();
 
-
 // Add Cater module
 builder.Services.AddCarter();
 builder.Services.Configure<FormOptions>(options =>

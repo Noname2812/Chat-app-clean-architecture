@@ -12,7 +12,7 @@ namespace ChatApp.API.Middleware
             if (token != null)
             {
                 var cacheService = context.RequestServices.GetRequiredService<IRedisService>();
-                var cacheRespone = await cacheService.GetDataByKey($"black-list-token:{token}");
+                var cacheRespone = await cacheService.GetDataObjectByKey<string>($"black-list-token:{token}");
                 if (!string.IsNullOrWhiteSpace(token) && !string.IsNullOrEmpty(cacheRespone))
                 {
                     context.Response.ContentType = "application/json";

@@ -4,16 +4,14 @@ using ChatApp.Contract.Abstractions.Message;
 using ChatApp.Contract.Abstractions.Shared;
 using ChatApp.Contract.DTOs;
 using ChatApp.Domain.Abstractions.Repositories;
-using ChatApp.Domain.Entities;
 using ChatApp.Domain.Enums;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 using static ChatApp.Contract.Services.V1.Message.Query;
-using static ChatApp.Contract.Services.V1.RoomChat.Respone;
 
 namespace ChatApp.Application.Usecases.V1.Queries.Message
 {
-    internal class GetMessageByRoomIdQueryHandler :QueryHanlderBase<Domain.Entities.Message,Guid>, IQueryHandler<GetMessagesByRoomIdQuery, PageResult<MessageDTO>>
+    public sealed class GetMessageByRoomIdQueryHandler :BaseQueryHandler<Domain.Entities.Message,Guid>, IQueryHandler<GetMessagesByRoomIdQuery, PageResult<MessageDTO>>
     {
         public GetMessageByRoomIdQueryHandler(IRepositoryBase<Domain.Entities.Message, Guid> repositoryBase, IMapper mapper) : base(repositoryBase, mapper)
         {

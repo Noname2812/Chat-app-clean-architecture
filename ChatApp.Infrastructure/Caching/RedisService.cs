@@ -1,6 +1,5 @@
 ﻿using ChatApp.Application.Abstractions.Services;
 using Microsoft.Extensions.Caching.Distributed;
-using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json.Serialization;
 using Newtonsoft.Json;
 using StackExchange.Redis;
@@ -16,13 +15,19 @@ namespace ChatApp.Infrastructure.Caching
             _distributedCache = distributedCache;
             _connectionMultiplexer = connectionMultiplexer;
         }
-        public async Task<string?> GetDataByKey(string key)
+        public async Task UpdateDataByKey(string key, object data)
         {
-            var res = await _distributedCache.GetStringAsync(key);
-            return string.IsNullOrEmpty(res) ? "" : JsonConvert.DeserializeObject<string>(res);
+            var db = _connectionMultiplexer.GetDatabase();
+            var serializerRespone = JsonConvert.SerializeObject(data, new JsonSerializerSettings()
+            {
+                ContractResolver = new CamelCasePropertyNamesContractResolver()
+            });
+            bool isSuccess = await db.StringSetAsync(key, serializerRespone);
+            if (!isSuccess)
+            {
+                throw new Exception();
+            }
         }
-
-
         public async Task RemoveDataByKey(string key)
         {
             var res = await _distributedCache.GetStringAsync(key);
@@ -32,7 +37,7 @@ namespace ChatApp.Infrastructure.Caching
             }
         }
 
-        public async Task SetData(string key, object data, TimeSpan exprationTime)
+        public async Task SetData(string key, object data, TimeSpan? exprationTime)
         {
             if (data != null)
             {
@@ -40,6 +45,7 @@ namespace ChatApp.Infrastructure.Caching
                 {
                     ContractResolver = new CamelCasePropertyNamesContractResolver()
                 });
+
                 await _distributedCache.SetStringAsync(key, serializerRespone, new DistributedCacheEntryOptions
                 {
                     AbsoluteExpirationRelativeToNow = exprationTime,
@@ -50,7 +56,7 @@ namespace ChatApp.Infrastructure.Caching
         public async Task<List<T>?> GetDataByEndpoint<T>(string endpoint)
         {
             var server = _connectionMultiplexer.GetServer(_connectionMultiplexer.GetEndPoints().First());
-            var keys = server.Keys(pattern: "list-users-online:*");
+            var keys = server.Keys(pattern: endpoint + '*');
             var values = new List<T>();
             foreach (var key in keys)
             {
@@ -63,5 +69,13 @@ namespace ChatApp.Infrastructure.Caching
             }
             return values;
         }
+
+        public async Task<T?> GetDataObjectByKey<T>(string key)
+        {
+            var objectValue = await _distributedCache.GetStringAsync(key);
+            return string.IsNullOrEmpty(objectValue) ? default : JsonConvert.DeserializeObject<T>(objectValue);
+        }
+
+
     }
 }

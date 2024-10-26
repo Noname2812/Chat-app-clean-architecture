@@ -50,7 +50,7 @@ namespace ChatApp.Application.Usecases.V1.Queries.Identity
                     },
                     User = _mapper.Map<UserDTO>(userexists)
                 };
-                await _publisher.Publish(new SignedInEvent(Guid.NewGuid(), userexists,refreshToken),cancellationToken);
+                await _publisher.Publish(new SignedInEvent(Guid.NewGuid(), userexists, refreshToken), cancellationToken);
                 return Result.Success(res);
             }
             throw new IdentityException.InvalidUser();

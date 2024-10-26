@@ -19,6 +19,12 @@ namespace ChatApp.Infrastructure.Hubs
             await _hubContext.Groups.AddToGroupAsync(ConnectionId, GroupId);
         }
 
+        public string GenarateTokenZegoClould(uint appID, string userID, string secret, long effectiveTimeInSeconds, string payload)
+        {
+            var token = GenarateTokenZegoCloud.GenerateToken04(appID, userID, secret, effectiveTimeInSeconds, payload);
+            return token.token;
+        }
+
         public async Task JoinAllGroupChatsWithUserId(string ConnectionId, string UserId)
         {
             var rooms = await _roomChatQueryRepository.GetIdRoomChatsByUserId(Guid.Parse(UserId));
@@ -31,7 +37,7 @@ namespace ChatApp.Infrastructure.Hubs
             }
         }
 
-        public async Task NotifyTo( string To, bool IsGroup, string Method, object value)
+        public async Task NotifyTo(string To, bool IsGroup, string Method, object value)
         {
             if (IsGroup == true)
             {

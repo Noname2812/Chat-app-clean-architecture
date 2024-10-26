@@ -12,7 +12,7 @@ using static ChatApp.Contract.Services.V1.RoomChat.Respone;
 
 namespace ChatApp.Application.Usecases.V1.Queries.RoomChat
 {
-    public sealed class GetRoomChatsByQueryHandler : QueryHanlderBase<Domain.Entities.RoomChat, Guid>, IQueryHandler<GetRoomChatsByQuery, PageResult<RoomChatRespone>>
+    public sealed class GetRoomChatsByQueryHandler : BaseQueryHandler<Domain.Entities.RoomChat, Guid>, IQueryHandler<GetRoomChatsByQuery, PageResult<RoomChatRespone>>
     {
         public GetRoomChatsByQueryHandler(IRepositoryBase<Domain.Entities.RoomChat, Guid> repository, IMapper mapper)
             : base(repository, mapper)

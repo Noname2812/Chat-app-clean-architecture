@@ -22,6 +22,7 @@ public class AuthApi : ApiEndpoint, ICarterModule
         group1.MapPost("refresh-token", RefreshTokenV1);
         group1.MapPost("register", RegisterAccountV1);
         group1.MapPost("logout", LogoutV1).RequireAuthorization();
+       
 
     }
     public static async Task<IResult> LoginV1(ISender sender, [FromBody] Contract.Services.V1.Identty.Query.LoginQuery login)

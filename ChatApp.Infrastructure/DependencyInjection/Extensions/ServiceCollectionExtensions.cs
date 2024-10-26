@@ -23,12 +23,12 @@ public static class ServiceCollectionExtensions
     public static void AddConfigurationRedis(this IServiceCollection services, IConfiguration configuration)
     {
         RedisOptions redisOption = new RedisOptions();
-            configuration.GetSection("RedisOptions").Bind(redisOption);
+        configuration.GetSection("RedisOptions").Bind(redisOption);
         services.AddStackExchangeRedisCache(options => options.Configuration = redisOption.ConnectionString);
         services.AddSingleton<IConnectionMultiplexer>(_ => ConnectionMultiplexer.Connect(redisOption.ConnectionString));
         services.AddTransient<IRedisService, RedisService>();
     }
-    public static void AddConfigurationSignalR(this IServiceCollection services) 
+    public static void AddConfigurationSignalR(this IServiceCollection services)
     {
         services.AddSignalR(options =>
         {
@@ -37,5 +37,15 @@ public static class ServiceCollectionExtensions
             options.EnableDetailedErrors = true;
         });
         services.AddTransient<IHubService, HubService>();
+    }
+    public static void AddConfgurationBackgroundJob(this IServiceCollection services)
+    {
+    //    services.AddHangfire(configuration => configuration
+    //.SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
+    //.UseSimpleAssemblyNameTypeSerializer()
+    //.UseRecommendedSerializerSettings()
+    //.UseSqlServerStorage(Configuration.GetConnectionString("HangfireConnection")));
+
+    //    services.AddHangfireServer();
     }
 }

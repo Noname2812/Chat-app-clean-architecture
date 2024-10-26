@@ -1,6 +1,7 @@
 ﻿using ChatApp.Application.Abstractions.Services;
 using ChatApp.Contract.Abstractions.Message;
 using ChatApp.Contract.Abstractions.Shared;
+using ChatApp.Contract.Constant;
 using ChatApp.Domain.Entities.Identity;
 using MediatR;
 using System.Security.Claims;
@@ -26,7 +27,7 @@ namespace ChatApp.Application.Usecases.V1.Queries.Identity
         }
         public async Task<Result<AuthenticatedRespone>> Handle(RefreshTokenQuery request, CancellationToken cancellationToken)
         {
-            var refreshTokenExists = await _redisService.GetDataByKey($"list-refresh-token:{request.UserId}");
+            var refreshTokenExists = await _redisService.GetDataObjectByKey<string>(KeyRedis.ListRefreshToken+ request.UserId);
             if (string.IsNullOrEmpty(refreshTokenExists))
             {
                 throw new RefreshTokenInvalidOrExpried();

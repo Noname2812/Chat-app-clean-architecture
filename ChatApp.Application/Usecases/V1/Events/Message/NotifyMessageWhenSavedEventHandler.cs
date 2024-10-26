@@ -1,6 +1,7 @@
 ﻿using ChatApp.Application.Abstractions.Services;
 using ChatApp.Contract.Abstractions.Message;
 using ChatApp.Contract.Constant;
+using ChatApp.Contract.Services.V1.ChatHub.Common;
 using ChatApp.Domain.Abstractions.Repositories;
 using ChatApp.Domain.Entities;
 using static ChatApp.Contract.Services.V1.Message.DomainEvent;
@@ -29,11 +30,11 @@ namespace ChatApp.Application.Usecases.V1.Events.Message
                 var user = await _repository.FindSingleAsync(x => x.RoomChatId == Guid.Parse(notification.To)
                 && x.UserId != Guid.Parse(notification.From));
                 // get connection Id
-                var toUser = await _redisService.GetDataByKey(KeyRedis.ListUsersOnline + user.UserId);
+                var toUser = await _redisService.GetDataObjectByKey<UserConnection>(KeyRedis.ListUsersOnline + user.UserId);
                 if (toUser != null)
                 {
 
-                    await _hubService.NotifyTo(toUser, notification.IsGroup, "ReceivedMessage", notification.Message);
+                    await _hubService.NotifyTo(toUser.ConnectionId, notification.IsGroup, "ReceivedMessage", notification.Message);
                 }
             }
         }

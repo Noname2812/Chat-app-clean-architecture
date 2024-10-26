@@ -13,7 +13,7 @@ namespace ChatApp.Presentation.APIs.Friend
 {
     public class FriendApi : ApiEndpoint, ICarterModule
     {
-        private const string BaseURL = "/api/v{version:apiVersion}/friends";
+        private const string BaseURL = "/api/v{version:apiVersion}/friend";
         public void AddRoutes(IEndpointRouteBuilder app)
         {
             var group1 = app.NewVersionedApi("Friend")
@@ -22,10 +22,10 @@ namespace ChatApp.Presentation.APIs.Friend
             group1.MapPost("add-friend", SendRequestAddFriendV1);
             group1.MapPost("update-request-add-friend", UpdateRequestAddFriendV1);
         }
-        public static async  Task<IResult> GetAllFriendsV1(ISender sender, ClaimsPrincipal user) 
+        public static async  Task<IResult> GetAllFriendsV1(ISender sender, ClaimsPrincipal user,string? keySearch, int? PageIndex,int? PageSize) 
         {
-
-            var result = await sender.Send(new GetAllFriendQuery(user.FindFirstValue(ClaimTypes.NameIdentifier)));
+            var userId = user.FindFirstValue(ClaimTypes.NameIdentifier);
+            var result = await sender.Send(new GetAllFriendQuery(Guid.Parse(userId), keySearch, PageIndex ?? 1, PageSize ?? 10));
             if (result.IsFailure)
             {
                 return HandleFailure(result);

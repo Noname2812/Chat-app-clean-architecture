@@ -8,6 +8,6 @@ namespace ChatApp.Contract.Services.V1.Friend
 {
     public static class Query
     {
-       public record GetAllFriendQuery(string UserId) : IQuery<PageResult<UserDTO>>;
+       public record GetAllFriendQuery(Guid UserId,string? KeySearch, int PageIndex, int PageSize) : IQuery<PageResult<UserDTO>>;
     }
 }
