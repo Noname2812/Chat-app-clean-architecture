@@ -8,7 +8,7 @@ using static ChatApp.Contract.Services.V1.ChatHub.DomainEvent;
 
 namespace ChatApp.Application.Usecases.V1.Events.Hub
 {
-    public sealed class StopedCallPrivateEventHandler : IDomainEventHandler<StopedCallEvent>
+    public sealed class StopedCallPrivateEventHandler : IDomainEventHandler<StopedCallPrivateEvent>
     {
         private readonly IHubService _hubService;
         private readonly IRedisService _redisService;
@@ -17,24 +17,24 @@ namespace ChatApp.Application.Usecases.V1.Events.Hub
             _hubService = hubService;
             _redisService = redisService;
         }
-        public async Task Handle(StopedCallEvent notification, CancellationToken cancellationToken)
+        public async Task Handle(StopedCallPrivateEvent notification, CancellationToken cancellationToken)
         {
             // update cache
-            var caller = await _redisService.GetDataObjectByKey<UserConnection>(KeyRedis.ListUsersOnline + notification.Caller.ToString());
-            caller.IsCalling = false;
-            if (notification.IsGroup)
-            {
-                // stop caller 
-            }
-            else
-            {
-                // stop private call
-                var to = await _redisService.GetDataObjectByKey<UserConnection>(KeyRedis.ListUsersOnline + notification.To.ToString());
-                to.IsCalling = false;
-                await Task.WhenAll(_hubService.NotifyTo(to.ConnectionId, false, "EndCall", 1),
-                    _redisService.SetData(KeyRedis.ListUsersOnline + notification.Caller, caller, null),
-                    _redisService.SetData(KeyRedis.ListUsersOnline + notification.To, to, null));
-            }
+            //var caller = await _redisService.GetDataObjectByKey<UserConnection>(KeyRedis.ListUsersOnline + notification.Caller.ToString());
+            //if (caller != null)
+            //{
+
+            //    caller.CallInfo = null;
+            //}
+            //var to = await _redisService.GetDataObjectByKey<UserConnection>(KeyRedis.ListUsersOnline + notification.To.ToString());
+            //if (to != null)
+            //{
+            //    to.CallInfo = null;
+            //}
+            //await Task.WhenAll(_hubService.NotifyTo(notification., true, "EndCall", 1),
+            //    _redisService.SetData(KeyRedis.ListUsersOnline + notification.Caller, caller, null),
+            //    _redisService.SetData(KeyRedis.ListUsersOnline + notification.To, to, null));
         }
     }
+}
 }

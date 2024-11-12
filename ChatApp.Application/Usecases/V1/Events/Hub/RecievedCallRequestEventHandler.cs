@@ -31,13 +31,15 @@ namespace ChatApp.Application.Usecases.V1.Events.Hub
                     _redisService.SetData(KeyRedis.ListUsersOnline + notification.To.UserId, new UserConnection
                     {
                         ConnectionId = to.ConnectionId,
-                        IsCalling = true,
-                    },null),
+                        CallInfo = new UserCallInfo { IsCalling = true, IsChatPrivate = true, RoomId = notification.RoomChat.Id },
+                    }, null),
                      _redisService.SetData(KeyRedis.ListUsersOnline + notification.Caller, new UserConnection
                      {
                          ConnectionId = caller.ConnectionId,
-                         IsCalling = true,
-                     },null));
+                         CallInfo = new UserCallInfo { IsCalling = true, IsChatPrivate = true, RoomId = notification.RoomChat.Id },
+                     }, null),
+                     _hubService.AddMemberIntoGroup(to.ConnectionId, notification.RoomChat.Id.ToString()),
+                     _hubService.AddMemberIntoGroup(caller.ConnectionId, notification.RoomChat.Id.ToString()));
             }
             else
             {
@@ -46,7 +48,6 @@ namespace ChatApp.Application.Usecases.V1.Events.Hub
                 {
                     Message = $"{notification.To.NickName} is calling !"
                 });
-
             }
         }
     }

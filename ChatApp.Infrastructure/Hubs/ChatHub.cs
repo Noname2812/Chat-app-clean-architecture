@@ -97,7 +97,7 @@ namespace ChatApp.Infrastructure.Hubs
             else
             {
                 var to = request.RoomChat.ConversationParticipants.Where(x => x.UserId != Guid.Parse(userId)).FirstOrDefault();
-                await _publisher.Publish(new RecievedRequestCallPrivateEvent(Guid.NewGuid(), Guid.Parse(userId), to,request.RoomChat, request.Type));
+                await _publisher.Publish(new RecievedRequestCallPrivateEvent(Guid.NewGuid(), Guid.Parse(userId), to, request.RoomChat, request.Type));
             }
         }
         public async Task CancelCallReqest()
@@ -106,6 +106,8 @@ namespace ChatApp.Infrastructure.Hubs
         }
         public async Task AcceptRequestCall(AcceptCallRequest request)
         {
+
+           
             var userId = Context.UserIdentifier;
             var token = GenarateTokenZegoCloud.GenerateToken04(request.Params.AppId, userId, request.Params.Secret,
              request.Params.EffectiveTimeInSeconds, request.Params.Payload);
@@ -130,13 +132,14 @@ namespace ChatApp.Infrastructure.Hubs
         {
             if (request.RoomChat.IsGroup)
             {
-                await _publisher.Publish(new StopedCallEvent(Guid.NewGuid(), request.Caller, request.RoomChat.Id, true));
+                //await _publisher.Publish(new StopedCallPrivateEvent(Guid.NewGuid(), request.Caller, request.RoomChat.Id, true));
             }
             else
             {
-                // stop call private
-                var to = request.RoomChat.ConversationParticipants.Where(x => x.UserId != request.Caller).FirstOrDefault();
-                await _publisher.Publish(new StopedCallEvent(Guid.NewGuid(), request.Caller, to.UserId, false));
+
+                // 1. updateRedis
+                // 2. Notify
+                await _publisher.Publish(new StopedCallPrivateEvent(Guid.NewGuid(), request.Caller));
             }
         }
         public async Task RequestOpenVideo()

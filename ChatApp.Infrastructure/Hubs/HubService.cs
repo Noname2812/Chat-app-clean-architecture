@@ -48,5 +48,10 @@ namespace ChatApp.Infrastructure.Hubs
                 await _hubContext.Clients.Client(To).SendAsync(Method, value);
             }
         }
+
+        public async Task RemoveMemberInGroup(string ConnectionId, string GroupId)
+        {
+            await _hubContext.Groups.RemoveFromGroupAsync(ConnectionId, GroupId);
+        }
     }
 }

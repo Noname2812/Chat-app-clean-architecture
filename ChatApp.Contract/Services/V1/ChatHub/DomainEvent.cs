@@ -10,6 +10,6 @@ namespace ChatApp.Contract.Services.V1.ChatHub
         public record SignedOutHubEvent(Guid Id, string UserId) : IDomainEvent;
         public record RecievedRequestCallPrivateEvent(Guid Id, Guid Caller, Domain.Entities.ConversationParticipant? To, Domain.Entities.RoomChat RoomChat, TypeCall Type) : IDomainEvent;
         public record AcceptedRequestCallEvent(Guid Id, ParamsCreateTokenZegoCloud Params, Guid Self, Domain.Entities.RoomChat RoomChat) : IDomainEvent;
-        public record StopedCallEvent(Guid Id, Guid Caller, Guid To, bool IsGroup = false) : IDomainEvent;
+        public record StopedCallPrivateEvent(Guid Id, Guid Caller) : IDomainEvent;
     }
 }
